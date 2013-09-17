@@ -1,7 +1,7 @@
 sis-python
 ==========
 
-Python materials, originally developed at [Summer Informatics School](http://lksh.ru/)
+Python materials, originally developed at [Summer Informatics School](http://lksh.ru/).
 
 pep8-digest
 -----------
