@@ -1,0 +1,100 @@
+\documentclass[a4paper, 12pt]{article}
+
+% languages
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{upquote}
+
+% spacing
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{inputencoding=utf8x, extendedchars=false}
+\lstdefinestyle{python}{
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    breakatwhitespace=true,
+    frame=single,
+    frameround=ffff,
+    xleftmargin=\parindent,
+    language=Python,
+    showstringspaces=false,
+    basicstyle=\ttfamily,
+    keywordstyle=\bfseries\color{blue!60!black},
+    commentstyle=\itshape\color{green!60!black},
+    identifierstyle=\color{blue!10!black},
+    stringstyle=\color{orange},
+    rulecolor=\color{white!85!black},
+    backgroundcolor=\color{white!97!black}
+}
+\lstset{style=python}
+
+\pagestyle{empty}
+
+\renewcommand{\labelitemi}{-}
+%\renewcommand{\labelitemii}{\textopenbullet}
+
+\begin{document}
+
+\section*{Файловый ввод-вывод в python}
+
+Для открытия файла в python, как на чтение, так и на запись, используется встроенная функция \lstinline{open}, которая возвращает открытый файл. Например:
+\begin{lstlisting}[texcl]
+file_r = open('task.in', 'r')   # Открытие файла на чтение
+file_w = open('task.out', 'w')  # Открытие файла на запись
+\end{lstlisting}
+
+Первый аргумент функции \lstinline{open}~--- имя файла, который нужно открыть. Второй аргумент~--- режим открытия файла (\lstinline{'r'}~--- для чтения, \lstinline{'w'}~--- для записи).
+
+Теперь переменные \lstinline{file_r} и \lstinline{file_w} можно использовать для чтения из файла и для записи в файл соответственно:
+
+\begin{lstlisting}[texcl]
+line = file_r.readline()  # Читает и возвращает очередную строку
+                          # из файла. Аналогична функции input().
+
+content = file_r.read()  # Читает весь файл и возвращает его
+                         # содержимое как строку. Например,
+                         # при следующем файле:
+                         # 1
+                         # abc
+                         # 5
+                         # результат будет: '1\textbackslash nabc\textbackslash n5\textbackslash n'.
+
+lines = file_r.readlines()  # Читает весь файл и возвращает
+                            # его содержимое, как список строк.
+
+file_w.write('any string')  # В качестве единственного аргумента
+                            # принимает строку и печатает её в файл
+                            # без последующего перевода строки.
+
+print(1, '345', file=file_w)  # Функция print имеет именованный
+                              # аргумент file, позволяющий выводить
+                              # данные в файл вместо экрана.
+
+file_r.close()   # Функция close используется для закрытия файла
+file_w.close()
+\end{lstlisting}
+
+В некоторых случаях удобно использовать следующий способ чтения файла:
+
+\begin{lstlisting}[texcl]
+for line in file_r.readlines():  # Цикл по всем строкам файла
+    print(line, file=file_w)
+\end{lstlisting}
+
+Этот пример выведет в файл \lstinline{file_w} содержимое файла \lstinline{file_r}. Вместо второй строки (с функцией \lstinline{print}) вы можете написать любой свой код.
+\vfill
+
+\hrulefill
+
+{\footnotesize Примечания:
+\begin{itemize}
+\item символ \lstinline{#} используется для обозначения начала комментария до конца строки. Все символы после него будут проигнорированы интерпретатором python.
+\item сочетание обратного слэша и символа \lstinline{'n'} (\lstinline{\n}) используется в строках для обозначения символа перевода строки.
+\end{itemize}
+}
+\end{document}
+
