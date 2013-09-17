@@ -1,0 +1,151 @@
+\documentclass[a4paper, 12pt]{article}
+
+% languages
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{upquote}
+
+% spacing
+\usepackage{geometry}
+\geometry{top = 2cm}
+\geometry{bottom = 2cm}
+\geometry{left = 2cm}
+\geometry{right = 2cm}
+
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{inputencoding=utf8x, extendedchars=false}
+\lstdefinestyle{python}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	breakatwhitespace=true,
+	frame=single,
+	frameround=ffff,
+	xleftmargin=\parindent,
+	language=Python,
+	showstringspaces=false,
+	basicstyle=\ttfamily,
+	keywordstyle=\bfseries\color{blue!60!black},
+	commentstyle=\itshape\color{green!60!black},
+	identifierstyle=\color{blue!10!black},
+	stringstyle=\color{orange},
+	rulecolor=\color{white!85!black},
+	backgroundcolor=\color{white!97!black}
+}
+\lstset{style=python}
+
+\pagestyle{empty}
+
+\renewcommand{\labelitemi}{-}
+%\renewcommand{\labelitemii}{\textopenbullet}
+
+\begin{document}
+
+\paragraph{Форматирование}
+
+\begin{itemize}
+\item Используйте 4 пробела для отступов.
+\item Никогда не смешивайте пробелы и символы табуляции.
+\item Не делайте строки длиннее 79 символов. Разделяйте строки на несколько с помощью заключения выражения в скобки. Этот способ лучше, чем использование обратного слэша. Делайте соответствующий отступ при переносе. При разбиении строки около бинарного оператора делайте разрыв \textbf{после} него.
+\begin{lstlisting}[texcl]
+var = (a * 10 +
+       b / 15)    # Правильно
+var = a * 10 \
+    + b / 15      # Неверно
+\end{lstlisting}
+
+\item Пишите \lstinline{import} каждого модуля в отдельной строке
+\item Располагайте все import'ы в верхней части файла перед любыми глобальными объявлениями.
+
+\item Не используйте лишних пробелов в следующих ситуациях:
+    \begin{itemize}
+    \item Сразу после скобок.
+        \begin{lstlisting}[texcl]
+spam(ham[1], {eggs: 2})        # Правильно
+spam( ham[ 1 ], { eggs: 2 } )  # Неверно
+		\end{lstlisting}
+    \item Перед запятой, точкой с запятой, двоеточием.
+        \begin{lstlisting}[texcl]
+if x == 4: print x, y; x, y = y, x       # Правильно
+if x == 4 : print x , y ; x , y = y , x  # Неверно
+		\end{lstlisting}
+    \item Перед открывающей круглой скобкой при вызове функции и перед открывающей квадратной скобкой, обозначающей индексирование или срез.
+        \begin{lstlisting}[texcl]
+spam(kind['key'], lst[1:3])     # Правильно
+spam (kind ['key'], lst [1:3])  # Неверно
+		\end{lstlisting}
+    \end{itemize}
+
+\item Всегда окружайте следующие бинарные операторы ровно одним символом пробела с каждой стороны:
+    \begin{itemize}
+    \item присваивания (\lstinline{=}, \lstinline{+=}, \lstinline{-=} и т.д.),
+    \item сравнения (\lstinline{==}, \lstinline{<}, \lstinline{>}, \lstinline{!=},
+		\lstinline{<>}, \lstinline{<=}, \lstinline{>=}, \lstinline{in}, \lstinline{not in},
+		\lstinline{is}, \lstinline{is not}),
+    \item логические (\lstinline{and}, \lstinline{or}, \lstinline{not}),
+    \item арифметические (\lstinline{+}, \lstinline{-}, \lstinline{*}, \lstinline{/}, \lstinline{//}).
+    \end{itemize}
+
+\item Не располагайте несколько инструкций в одной строке. Разнесите их по разным строкам.
+    \begin{lstlisting}[texcl]
+x = 3            # Правильно
+func(10)
+x = 3; func(10)  # Неверно 
+	\end{lstlisting}
+\item Не располагайте блок из нескольких инструкций на той же строке сразу после двоеточия (после \lstinline{if}, \lstinline{while} и т.д.).
+
+\end{itemize}
+
+\paragraph{Комментарии}
+
+\begin{itemize}
+\item Комментарии, противоречащие коду, хуже, чем их отсутствие.
+\item Располагайте однострочные комментарии после кода в той же строке и отделяйте их от кода не менее, чем двумя пробелами. Комментарии должны начинаться с \lstinline{#} и одного пробела.
+\end{itemize}
+
+\paragraph{Имена}
+
+\begin{itemize}
+	\item Не используйте символы '\lstinline{l}', '\lstinline{O}', и '\lstinline{I}' как имена переменных. В некоторых шрифтах они могут быть очень похожи на цифры.
+
+	\item Имена переменных и функций должны содержать только маленькие буквы. Слова разделяются символами подчёркивания. Примеры:
+	\begin{lstlisting}
+name, name_from_several_words
+	\end{lstlisting}
+
+	\item Имена констант должны содержать только заглавные буквы. Слова разделяются символами подчёркивания. Примеры:
+	\begin{lstlisting}
+NAME, NAME_FROM_SEVERAL_WORDS
+	\end{lstlisting}
+\end{itemize}
+
+\paragraph{Программирование}
+
+\begin{itemize}
+	\item Сравнение с такими значениями как \lstinline{None} должно осуществляться с помощью операторов \lstinline{is} и \lstinline{is not}, а не операторами сравнения.
+	\item Используйте методы \lstinline{''.startswith()} и \lstinline{''.endswith()} вместо срезов для проверки начала и конца строк.
+	\item Для последовательностей (строк, списков, кортежей) используйте факт, что пустая последовательность эквивалентна \lstinline{False}.
+	\item Не проверяйте переменные логического типа на \lstinline{True} и \lstinline{False} используя ==.
+\end{itemize}
+
+\paragraph{Функции}
+
+\begin{itemize}
+	\item Не ставьте пробелы вокруг знака \lstinline{=} при передаче функции именованных аргументов.
+	\begin{lstlisting}[texcl]
+f(5, x=7)    # Правильно
+f(5, x = 7)  # Неверно
+	\end{lstlisting}
+
+	\item Разделяйте определения функций двумя пустыми строками.
+
+	\item Разделяйте тело функции на логические части одной пустой строкой.
+\end{itemize}
+
+\paragraph{Исключения из правил} \
+
+Перечисленные выше правила имеет смысл нарушать в тех случаях, когда следование им понижает читаемость кода даже для людей, привыкших к этим правилам. Трижды подумайте, прежде чем делать это.
+
+\end{document}
