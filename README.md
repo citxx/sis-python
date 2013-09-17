@@ -6,11 +6,11 @@ Python materials, originally developed at [Summer Informatics School](http://lks
 pep8-digest
 -----------
 
-A digest of PEP8 containing only features necessary for beginners.
+A digest of PEP8 ([pdf](https://github.com/citxx/sis-python/releases/download/last/pep8-digest.pdf)) containing only features necessary for beginners.
 
 
 file-io
 -------
 
-Cheet sheet on python file IO.
+Cheet sheet on python file IO ([pdf](https://github.com/citxx/sis-python/releases/download/last/file-io.pdf)).
 
