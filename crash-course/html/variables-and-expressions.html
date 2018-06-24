@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8" />
+<!-- saved from url=(0058)http://localhost:8888/files/variables-and-expressions.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>variables-and-expressions</title>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="./variables-and-expressions_files/require.min.js"></script>
+<script src="./variables-and-expressions_files/jquery.min.js"></script>
 
 <style type="text/css">
     /*!
@@ -11730,13 +11730,13 @@ div#notebook {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="./variables-and-expressions_files/custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="./variables-and-expressions_files/MathJax.js" id=""></script>
     <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
+    <script type="text/x-mathjax-config;executed=true">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -11753,8 +11753,128 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
-<body>
+    <!-- End of mathjax configuration --><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 0; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Blank; src: url('about:blank')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -11763,7 +11883,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;,-&#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;-&#1080;-&#1087;&#1088;&#1086;&#1089;&#1090;&#1086;&#1081;-&#1074;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;">&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;, &#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103; &#1080; &#1087;&#1088;&#1086;&#1089;&#1090;&#1086;&#1081; &#1074;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;<a class="anchor-link" href="#&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;,-&#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;-&#1080;-&#1087;&#1088;&#1086;&#1089;&#1090;&#1086;&#1081;-&#1074;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;">&#182;</a></h1>
+<p></p><h1>Содержание<span class="tocSkip"></span></h1><p></p>
+<div class="toc"><ul class="toc-item"><li><span><a href="http://localhost:8888/files/variables-and-expressions.html#Переменные" data-toc-modified-id="Переменные-1">Переменные</a></span></li><li><span><a href="http://localhost:8888/files/variables-and-expressions.html#Ввод-вывод" data-toc-modified-id="Ввод-вывод-2">Ввод-вывод</a></span></li><li><span><a href="http://localhost:8888/files/variables-and-expressions.html#Арифметические-операции" data-toc-modified-id="Арифметические-операции-3">Арифметические операции</a></span></li><li><span><a href="http://localhost:8888/files/variables-and-expressions.html#Арифметические-выражения" data-toc-modified-id="Арифметические-выражения-4">Арифметические выражения</a></span></li><li><span><a href="http://localhost:8888/files/variables-and-expressions.html#Стиль-программирования" data-toc-modified-id="Стиль-программирования-5">Стиль программирования</a></span><ul class="toc-item"><li><span><a href="http://localhost:8888/files/variables-and-expressions.html#Как" data-toc-modified-id="Как-5.1">Как</a></span></li><li><span><a href="http://localhost:8888/files/variables-and-expressions.html#Для-кого" data-toc-modified-id="Для-кого-5.2">Для кого</a></span></li><li><span><a href="http://localhost:8888/files/variables-and-expressions.html#За-что-мне-это?" data-toc-modified-id="За-что-мне-это?-5.3">За что мне это?</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
@@ -11772,7 +11893,16 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;">&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;<a class="anchor-link" href="#&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;">&#182;</a></h2>
+<h1 id="Переменные,-выражения-и-простой-ввод-вывод">Переменные, выражения и простой ввод-вывод<a class="anchor-link" href="http://localhost:8888/files/variables-and-expressions.html#Переменные,-выражения-и-простой-ввод-вывод">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Переменные">Переменные<a class="anchor-link" href="http://localhost:8888/files/variables-and-expressions.html#Переменные">¶</a></h2>
 </div>
 </div>
 </div>
@@ -11788,11 +11918,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;Hello, LKSH&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">"Hello, LKSH"</span>
 <span class="n">c</span> <span class="o">=</span> <span class="mf">5.0</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
@@ -11835,7 +11965,7 @@ Hello, LKSH
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1042;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;">&#1042;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;<a class="anchor-link" href="#&#1042;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;">&#182;</a></h2>
+<h2 id="Ввод-вывод">Ввод-вывод<a class="anchor-link" href="http://localhost:8888/files/variables-and-expressions.html#Ввод-вывод">¶</a></h2>
 </div>
 </div>
 </div>
@@ -11851,12 +11981,12 @@ Hello, LKSH
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;+&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">"+"</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">"="</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11890,7 +12020,7 @@ Hello, LKSH
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
@@ -11931,7 +12061,7 @@ Hello, LKSH
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
@@ -11973,7 +12103,7 @@ Hello, LKSH
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
@@ -11991,15 +12121,14 @@ Hello, LKSH
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-6-4374d682a371&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-5-4374d682a371&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>a <span class="ansi-blue-fg">=</span> int<span class="ansi-blue-fg">(</span>input<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> b <span class="ansi-blue-fg">=</span> int<span class="ansi-blue-fg">(</span>input<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>a <span class="ansi-blue-fg">+</span> b<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">TypeError</span>: int() argument must be a string, a bytes-like object or a number, not &#39;method&#39;</pre>
+<span class="ansi-red-fg">TypeError</span>: int() argument must be a string, a bytes-like object or a number, not 'method'</pre>
 </div>
 </div>
 
@@ -12014,8 +12143,7 @@ Hello, LKSH
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Эту ошибку можно перевести с английского так:</p>
 
-<pre><code>ОшибкаТипа: аргумент функции int() должен быть строкой, последовательностью байтов или числом, а не 
-функцией</code></pre>
+<pre><code>ОшибкаТипа: аргумент функции int() должен быть строкой, последовательностью байтов или числом, а не функцией</code></pre>
 <p>Теперь вы знаете что делать, если получите такую ошибку ;)</p>
 
 </div>
@@ -12026,7 +12154,7 @@ Hello, LKSH
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1094;&#1080;&#1080;">&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1086;&#1087;&#1077;&#1088;&#1072;&#1094;&#1080;&#1080;<a class="anchor-link" href="#&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1094;&#1080;&#1080;">&#182;</a></h2>
+<h2 id="Арифметические-операции">Арифметические операции<a class="anchor-link" href="http://localhost:8888/files/variables-and-expressions.html#Арифметические-операции">¶</a></h2>
 </div>
 </div>
 </div>
@@ -12192,7 +12320,7 @@ Hello, LKSH
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Возведение <code>a</code> в степень <code>b</code></strong> — это перемножение <code>a</code> на само себя <code>b</code> раз. В математике обозначается как $a^b$.</p>
+<p><strong>Возведение <code>a</code> в степень <code>b</code></strong> — это перемножение <code>a</code> на само себя <code>b</code> раз. В математике обозначается как <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 1.174em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.174em 1000.94em 2.345em -999.997em); top: -2.163em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="msubsup" id="MathJax-Span-3"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(3.34em 1000.47em 4.16em -999.997em); top: -3.978em; left: 0em;"><span class="mi" id="MathJax-Span-4" style="font-family: STIXGeneral; font-style: italic;">a</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; top: -4.33em; left: 0.53em;"><span class="mi" id="MathJax-Span-5" style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;">b</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.169em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 1.218em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>a</mi><mi>b</mi></msup></math></span></span><script type="math/tex" id="MathJax-Element-1">a^b</script>.</p>
 
 </div>
 </div>
@@ -12215,7 +12343,7 @@ Hello, LKSH
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Возведение в степень работает для вещественных <code>a</code> и отрицательных <code>b</code>. Число в отрицательной степени — это единица делённое на то же число в положительной степени: $a^{-b} = \frac{1}{a^b}$</p>
+<p>Возведение в степень работает для вещественных <code>a</code> и отрицательных <code>b</code>. Число в отрицательной степени — это единица делённое на то же число в положительной степени: <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;msup&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;/msup&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-6" style="width: 4.511em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.691em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.467em 1003.69em 3.165em -999.997em); top: -2.515em; left: 0em;"><span class="mrow" id="MathJax-Span-7"><span class="msubsup" id="MathJax-Span-8"><span style="display: inline-block; position: relative; width: 1.408em; height: 0px;"><span style="position: absolute; clip: rect(3.34em 1000.47em 4.16em -999.997em); top: -3.978em; left: 0em;"><span class="mi" id="MathJax-Span-9" style="font-family: STIXGeneral; font-style: italic;">a</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; top: -4.33em; left: 0.53em;"><span class="texatom" id="MathJax-Span-10"><span class="mrow" id="MathJax-Span-11"><span class="mo" id="MathJax-Span-12" style="font-size: 70.7%; font-family: STIXGeneral;">−</span><span class="mi" id="MathJax-Span-13" style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;">b</span></span></span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span></span></span><span class="mo" id="MathJax-Span-14" style="font-family: STIXGeneral; padding-left: 0.296em;">=</span><span class="mfrac" id="MathJax-Span-15" style="padding-left: 0.296em;"><span style="display: inline-block; position: relative; width: 0.764em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.34em 1000.3em 4.16em -999.997em); top: -4.388em; left: 50%; margin-left: -0.173em;"><span class="mn" id="MathJax-Span-16" style="font-size: 70.7%; font-family: STIXGeneral;">1</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; clip: rect(3.282em 1000.65em 4.16em -999.997em); top: -3.51em; left: 50%; margin-left: -0.348em;"><span class="msubsup" id="MathJax-Span-17"><span style="display: inline-block; position: relative; width: 0.647em; height: 0px;"><span style="position: absolute; clip: rect(3.516em 1000.35em 4.16em -999.997em); top: -3.978em; left: 0em;"><span class="mi" id="MathJax-Span-18" style="font-size: 70.7%; font-family: STIXGeneral; font-style: italic;">a</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; top: -4.154em; left: 0.354em;"><span class="mi" id="MathJax-Span-19" style="font-size: 50%; font-family: STIXGeneral; font-style: italic;">b</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; clip: rect(0.823em 1000.76em 1.232em -999.997em); top: -1.285em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.764em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.057em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.52em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.639em; border-left: 0px solid; width: 0px; height: 1.789em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>a</mi><mrow class="MJX-TeXAtom-ORD"><mo>−</mo><mi>b</mi></mrow></msup><mo>=</mo><mfrac><mn>1</mn><msup><mi>a</mi><mi>b</mi></msup></mfrac></math></span></span><script type="math/tex" id="MathJax-Element-2">a^{-b} = \frac{1}{a^b}</script></p>
 
 </div>
 </div>
@@ -12285,8 +12413,8 @@ Hello, LKSH
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Запись вида <code>&lt;число&gt;e&lt;степень&gt;</code> — это другой способ записать $\text{<число>} \cdot 10^\text{<степень>}$. То есть:</p>
-$$\text{7.888609052210118e+69} = 7.888609052210118 \cdot 10^{69}$$<p>а это то же самое, что и 7888609052210118000000000000000000000000000000000000000000000000000000.</p>
+<p>Запись вида <code>&lt;число&gt;e&lt;степень&gt;</code> — это другой способ записать <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mtext&gt;&amp;lt;&amp;#x447;&amp;#x438;&amp;#x441;&amp;#x43B;&amp;#x43E;&amp;gt;&lt;/mtext&gt;&lt;mo&gt;&amp;#x22C5;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mtext&gt;&amp;lt;&amp;#x441;&amp;#x442;&amp;#x435;&amp;#x43F;&amp;#x435;&amp;#x43D;&amp;#x44C;&amp;gt;&lt;/mtext&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-20" style="width: 11.01em; display: inline-block;"><span style="display: inline-block; position: relative; width: 9.019em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.584em 1009.02em 2.696em -999.997em); top: -2.515em; left: 0em;"><span class="mrow" id="MathJax-Span-21"><span class="mtext" id="MathJax-Span-22" style="font-family: STIXGeneral;">&lt;число&gt;</span><span class="mo" id="MathJax-Span-23" style="font-family: STIXGeneral; padding-left: 0.237em;">⋅</span><span class="msubsup" id="MathJax-Span-24" style="padding-left: 0.237em;"><span style="display: inline-block; position: relative; width: 4.394em; height: 0px;"><span style="position: absolute; clip: rect(3.106em 1001em 4.16em -999.997em); top: -3.978em; left: 0em;"><span class="mn" id="MathJax-Span-25" style="font-family: STIXGeneral;">10</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; top: -4.388em; left: 0.998em;"><span class="mtext" id="MathJax-Span-26" style="font-size: 70.7%; font-family: STIXGeneral;">&lt;степень&gt;</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.52em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 1.146em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtext>&lt;число&gt;</mtext><mo>⋅</mo><msup><mn>10</mn><mtext>&lt;степень&gt;</mtext></msup></math></span></span><script type="math/tex" id="MathJax-Element-3">\text{<число>} \cdot 10^\text{<степень>}</script>. То есть:</p>
+<span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mtext&gt;7.888609052210118e+69&lt;/mtext&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;7.888609052210118&lt;/mn&gt;&lt;mo&gt;&amp;#x22C5;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mn&gt;69&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-27" style="width: 27.403em; display: inline-block;"><span style="display: inline-block; position: relative; width: 22.427em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.467em 1022.43em 2.755em -999.997em); top: -2.515em; left: 0em;"><span class="mrow" id="MathJax-Span-28"><span class="mtext" id="MathJax-Span-29" style="font-family: STIXGeneral;">7.888609052210118e+69</span><span class="mo" id="MathJax-Span-30" style="font-family: STIXGeneral; padding-left: 0.296em;">=</span><span class="mn" id="MathJax-Span-31" style="font-family: STIXGeneral; padding-left: 0.296em;">7.888609052210118</span><span class="mo" id="MathJax-Span-32" style="font-family: STIXGeneral; padding-left: 0.237em;">⋅</span><span class="msubsup" id="MathJax-Span-33" style="padding-left: 0.237em;"><span style="display: inline-block; position: relative; width: 1.759em; height: 0px;"><span style="position: absolute; clip: rect(3.106em 1001em 4.16em -999.997em); top: -3.978em; left: 0em;"><span class="mn" id="MathJax-Span-34" style="font-family: STIXGeneral;">10</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; top: -4.388em; left: 0.998em;"><span class="texatom" id="MathJax-Span-35"><span class="mrow" id="MathJax-Span-36"><span class="mn" id="MathJax-Span-37" style="font-size: 70.7%; font-family: STIXGeneral;">69</span></span></span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.52em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.139em; border-left: 0px solid; width: 0px; height: 1.289em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtext>7.888609052210118e+69</mtext><mo>=</mo><mn>7.888609052210118</mn><mo>⋅</mo><msup><mn>10</mn><mrow class="MJX-TeXAtom-ORD"><mn>69</mn></mrow></msup></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-4">\text{7.888609052210118e+69} = 7.888609052210118 \cdot 10^{69}</script><p>а это то же самое, что и 7888609052210118000000000000000000000000000000000000000000000000000000.</p>
 <p>Этот результат не настолько точен, как предыдущий. Так происходит потому, что для хранения каждого вещественного числа Python использует фиксированное количество памяти, а значит может хранить число только с ограниченной точностью.</p>
 
 </div>
@@ -12297,7 +12425,7 @@ $$\text{7.888609052210118e+69} = 7.888609052210118 \cdot 10^{69}$$<p>а это �
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Возведение в степень также работает и для вещественной степени. Например $\sqrt{a} = a^\frac{1}{2} = a^{0.5}$</p>
+<p>Возведение в степень также работает и для вещественной степени. Например <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-5-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msqrt&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/msqrt&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;/msup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mn&gt;0.5&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-38" style="width: 7.907em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.443em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.232em 1006.44em 2.93em -999.997em); top: -2.515em; left: 0em;"><span class="mrow" id="MathJax-Span-39"><span class="msqrt" id="MathJax-Span-40"><span style="display: inline-block; position: relative; width: 1.232em; height: 0px;"><span style="position: absolute; clip: rect(3.34em 1000.47em 4.16em -999.997em); top: -3.978em; left: 0.764em;"><span class="mrow" id="MathJax-Span-41"><span class="mi" id="MathJax-Span-42" style="font-family: STIXGeneral; font-style: italic;">a</span></span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; clip: rect(2.989em 1000.53em 3.399em -999.997em); top: -3.861em; left: 0.764em;"><span style="font-family: STIXGeneral;">‾</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; clip: rect(2.872em 1000.76em 4.16em -999.997em); top: -3.744em; left: 0em;"><span style="font-family: STIXVariants;">√</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span></span></span><span class="mo" id="MathJax-Span-43" style="font-family: STIXGeneral; padding-left: 0.296em;">=</span><span class="msubsup" id="MathJax-Span-44" style="padding-left: 0.296em;"><span style="display: inline-block; position: relative; width: 1.174em; height: 0px;"><span style="position: absolute; clip: rect(3.34em 1000.47em 4.16em -999.997em); top: -3.978em; left: 0em;"><span class="mi" id="MathJax-Span-45" style="font-family: STIXGeneral; font-style: italic;">a</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; top: -4.388em; left: 0.53em;"><span class="mfrac" id="MathJax-Span-46"><span style="display: inline-block; position: relative; width: 0.354em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.457em 1000.18em 4.16em -999.997em); top: -4.33em; left: 50%; margin-left: -0.114em;"><span class="mn" id="MathJax-Span-47" style="font-size: 50%; font-family: STIXGeneral;">1</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; clip: rect(3.457em 1000.24em 4.16em -999.997em); top: -3.627em; left: 50%; margin-left: -0.114em;"><span class="mn" id="MathJax-Span-48" style="font-size: 50%; font-family: STIXGeneral;">2</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; clip: rect(0.823em 1000.35em 1.232em -999.997em); top: -1.227em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.354em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.057em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span></span></span><span class="mo" id="MathJax-Span-49" style="font-family: STIXGeneral; padding-left: 0.296em;">=</span><span class="msubsup" id="MathJax-Span-50" style="padding-left: 0.296em;"><span style="display: inline-block; position: relative; width: 1.467em; height: 0px;"><span style="position: absolute; clip: rect(3.34em 1000.47em 4.16em -999.997em); top: -3.978em; left: 0em;"><span class="mi" id="MathJax-Span-51" style="font-family: STIXGeneral; font-style: italic;">a</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; top: -4.33em; left: 0.53em;"><span class="texatom" id="MathJax-Span-52"><span class="mrow" id="MathJax-Span-53"><span class="mn" id="MathJax-Span-54" style="font-size: 70.7%; font-family: STIXGeneral;">0.5</span></span></span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.52em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.354em; border-left: 0px solid; width: 0px; height: 1.861em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msqrt><mi>a</mi></msqrt><mo>=</mo><msup><mi>a</mi><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>=</mo><msup><mi>a</mi><mrow class="MJX-TeXAtom-ORD"><mn>0.5</mn></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-5">\sqrt{a} = a^\frac{1}{2} = a^{0.5}</script></p>
 
 </div>
 </div>
@@ -12353,7 +12481,7 @@ $$\text{7.888609052210118e+69} = 7.888609052210118 \cdot 10^{69}$$<p>а это �
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;-&#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;">&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;<a class="anchor-link" href="#&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;-&#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;">&#182;</a></h2>
+<h2 id="Арифметические-выражения">Арифметические выражения<a class="anchor-link" href="http://localhost:8888/files/variables-and-expressions.html#Арифметические-выражения">¶</a></h2>
 </div>
 </div>
 </div>
@@ -12389,7 +12517,7 @@ $$\text{7.888609052210118e+69} = 7.888609052210118 \cdot 10^{69}$$<p>а это �
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>В примере выше переменной <code>c</code> присвоено значение выражения</p>
-$$\frac{a^2 + b \cdot 3}{9 - b \text{ mod } (a + 1)}$$<p>При отсутствии скобок арфиметические операции в выражении вычисляются в порядке приоритета (см. таблицу выше). Сначала выполняются операции с приоритетом 1, потом с приоритетом 2 и т.д. При одинаковом приоритете вычисление происходит слева направо. Вы можете использовать скобки, чтобы менять порядок вычисления.</p>
+<span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;&amp;#x22C5;&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;9&lt;/mn&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mtext&gt;&amp;#xA0;mod&amp;#xA0;&lt;/mtext&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-55" style="width: 9.312em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.614em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(0.471em 1007.61em 3.223em -999.997em); top: -2.163em; left: 0em;"><span class="mrow" id="MathJax-Span-56"><span class="mfrac" id="MathJax-Span-57"><span style="display: inline-block; position: relative; width: 7.38em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(2.989em 1003.81em 4.218em -999.997em); top: -4.681em; left: 50%; margin-left: -1.929em;"><span class="mrow" id="MathJax-Span-58"><span class="msubsup" id="MathJax-Span-59"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(3.34em 1000.47em 4.16em -999.997em); top: -3.978em; left: 0em;"><span class="mi" id="MathJax-Span-60" style="font-family: STIXGeneral; font-style: italic;">a</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; top: -4.33em; left: 0.53em;"><span class="mn" id="MathJax-Span-61" style="font-size: 70.7%; font-family: STIXGeneral;">2</span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span></span></span><span class="mo" id="MathJax-Span-62" style="font-family: STIXGeneral; padding-left: 0.237em;">+</span><span class="mi" id="MathJax-Span-63" style="font-family: STIXGeneral; font-style: italic; padding-left: 0.237em;">b</span><span class="mo" id="MathJax-Span-64" style="font-family: STIXGeneral; padding-left: 0.237em;">⋅</span><span class="mn" id="MathJax-Span-65" style="font-family: STIXGeneral; padding-left: 0.237em;">3</span></span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; clip: rect(3.106em 1007.2em 4.335em -999.997em); top: -3.276em; left: 50%; margin-left: -3.627em;"><span class="mrow" id="MathJax-Span-66"><span class="mn" id="MathJax-Span-67" style="font-family: STIXGeneral;">9</span><span class="mo" id="MathJax-Span-68" style="font-family: STIXGeneral; padding-left: 0.237em;">−</span><span class="mi" id="MathJax-Span-69" style="font-family: STIXGeneral; font-style: italic; padding-left: 0.237em;">b</span><span class="mtext" id="MathJax-Span-70" style="font-family: STIXGeneral;">&nbsp;mod&nbsp;</span><span class="mo" id="MathJax-Span-71" style="font-family: STIXGeneral;">(</span><span class="mi" id="MathJax-Span-72" style="font-family: STIXGeneral; font-style: italic;">a</span><span class="mo" id="MathJax-Span-73" style="font-family: STIXGeneral; padding-left: 0.237em;">+</span><span class="mn" id="MathJax-Span-74" style="font-family: STIXGeneral; padding-left: 0.237em;">1</span><span class="mo" id="MathJax-Span-75" style="font-family: STIXGeneral;">)</span></span><span style="display: inline-block; width: 0px; height: 3.984em;"></span></span><span style="position: absolute; clip: rect(0.823em 1007.38em 1.232em -999.997em); top: -1.285em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 7.38em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.057em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.169em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.139em; border-left: 0px solid; width: 0px; height: 3.075em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mfrac><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mo>⋅</mo><mn>3</mn></mrow><mrow><mn>9</mn><mo>−</mo><mi>b</mi><mtext>&nbsp;mod&nbsp;</mtext><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-6">\frac{a^2 + b \cdot 3}{9 - b \text{ mod } (a + 1)}</script><p>При отсутствии скобок арфиметические операции в выражении вычисляются в порядке приоритета (см. таблицу выше). Сначала выполняются операции с приоритетом 1, потом с приоритетом 2 и т.д. При одинаковом приоритете вычисление происходит слева направо. Вы можете использовать скобки, чтобы менять порядок вычисления.</p>
 
 </div>
 </div>
@@ -12408,7 +12536,107 @@ $$\frac{a^2 + b \cdot 3}{9 - b \text{ mod } (a + 1)}$$<p>При отсутств
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Стиль-программирования">Стиль программирования<a class="anchor-link" href="http://localhost:8888/files/variables-and-expressions.html#Стиль-программирования">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Здесь можно найти полный список правил оформления программ: <a href="http://localhost:8888/files/variables-and-expressions.html">TODO</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Как">Как<a class="anchor-link" href="http://localhost:8888/files/variables-and-expressions.html#Как">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Вкратце, стиль — это о том, чтобы писать так:</p>
+<div class="highlight"><pre><span></span><span class="n">TODO</span>
+</pre></div>
+<p>а не так:</p>
+<div class="highlight"><pre><span></span><span class="n">TODO</span>
+</pre></div>
+<p>Идеал — посмотрев на любую строчку вашей программы можно понять, что эта строчка делает, даже не зная ничего обо всей остальной программе.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Для-кого">Для кого<a class="anchor-link" href="http://localhost:8888/files/variables-and-expressions.html#Для-кого">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Стиль программирования сильно упрощает жизнь людям, которые читают ваш код. Сейчас это:</p>
+<ul>
+<li><strong>Преподаватели</strong>, которые хотят быстро понять, что вы написали, чтобы помочь в обучении.<ul>
+<li>Чем более читаем ваш код, тем меньше времени мы тратим на проверку каждого решения и тем быстрее вы получаете ОК по задаче ;)</li>
+</ul>
+</li>
+<li><strong>Вы сами</strong> читаете код в процессе написания.<ul>
+<li>Пока что это не так заметно, потому что программу в 30-50 строк можно держать в голове</li>
+<li>Довольно скоро размер ваших программ станет достигать нескольких сотен строк. Если к этому моменту вы не научитесь писать читаемый код, то на написание и отладку</li>
+</ul>
+</li>
+</ul>
+<p><strong>Частая ошибка:</strong> сначала писать код кое как и исправлять стиль перед отправлением на проверку. Так вы добровольно:</p>
+<ul>
+<li>Отказываетесь от преимущества для себя, постоянно читая нечитаемый код в процессе его написания</li>
+<li>Замедляете выработку привычки писать сразу понятно</li>
+</ul>
+<p>Ну и жизнь не заканчивается на дипломе всероса и поступлении в ВУЗ. Если вы пойдёте работать программистом, ваш код будет читать очень много людей.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="За-что-мне-это?">За что мне это?<a class="anchor-link" href="http://localhost:8888/files/variables-and-expressions.html#За-что-мне-это?">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>По началу это будет требовать дополнительных усилий и даже немного отвлекать от основной задачи. Но довольно скоро писать читаемый код войдтёт у вас в привычку и вы будете делать это автоматически.</p>
+
+</div>
+</div>
+</div>
     </div>
   </div>
-</body>
-</html>
+
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: STIXSizeOneSym, sans-serif;"></div></div></body></html>
