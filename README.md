@@ -36,12 +36,15 @@ To have an awesome preview install an extension:
 
 ### Jupyter shortcuts
 
-`Enter` to enter edit mode, `Ctrl-Enter` to exit edit mode to command mode. Most useful shortcuts:
+* `Enter` to enter edit mode
+* `Ctrl-Enter` to exit edit mode to command mode
 
-`A` : insert cell above
-`B` : insert cell below
-`Y` : change cell to code
-`M` : change cell to markdown
-`1` : change cell to heading 1
-`2` : change cell to heading 2
+In command mode:
+
+* `A` : insert cell above
+* `B` : insert cell below
+* `Y` : change cell to code
+* `M` : change cell to markdown
+* `1` : change cell to heading 1
+* `2` : change cell to heading 2
 
