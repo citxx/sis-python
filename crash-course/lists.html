@@ -3,8 +3,8 @@
 <head><meta charset="utf-8" />
 <title>lists</title>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="files/require.min.js"></script>
+<script src="files/jquery.min.js"></script>
 
 <style type="text/css">
     /*!
@@ -11739,7 +11739,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="files/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11769,7 +11769,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Содержание<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Базовые-операции" data-toc-modified-id="Базовые-операции-1">Базовые операции</a></span><ul class="toc-item"><li><span><a href="#Создание-списка" data-toc-modified-id="Создание-списка-1.1">Создание списка</a></span></li><li><span><a href="#Доступ-к-элементам" data-toc-modified-id="Доступ-к-элементам-1.2">Доступ к элементам</a></span></li><li><span><a href="#Добавление-элемента-в-конец" data-toc-modified-id="Добавление-элемента-в-конец-1.3">Добавление элемента в конец</a></span></li><li><span><a href="#Длина-списка" data-toc-modified-id="Длина-списка-1.4">Длина списка</a></span></li><li><span><a href="#Сортировка" data-toc-modified-id="Сортировка-1.5">Сортировка</a></span></li><li><span><a href="#Сложение" data-toc-modified-id="Сложение-1.6">Сложение</a></span></li><li><span><a href="#Особенности-присваивания-списков" data-toc-modified-id="Особенности-присваивания-списков-1.7">Особенности присваивания списков</a></span></li></ul></li><li><span><a href="#Списки-и-if" data-toc-modified-id="Списки-и-if-2">Списки и if</a></span><ul class="toc-item"><li><span><a href="#Преобразование-к-логическому-значению" data-toc-modified-id="Преобразование-к-логическому-значению-2.1">Преобразование к логическому значению</a></span></li><li><span><a href="#Проверка-наличия-элемента-в-списке" data-toc-modified-id="Проверка-наличия-элемента-в-списке-2.2">Проверка наличия элемента в списке</a></span></li></ul></li><li><span><a href="#Списки-и-for" data-toc-modified-id="Списки-и-for-3">Списки и for</a></span></li><li><span><a href="#Распаковка-списков" data-toc-modified-id="Распаковка-списков-4">Распаковка списков</a></span></li><li><span><a href="#Другие-операции" data-toc-modified-id="Другие-операции-5">Другие операции</a></span><ul class="toc-item"><li><span><a href="#Минимум" data-toc-modified-id="Минимум-5.1">Минимум</a></span></li><li><span><a href="#Сумма" data-toc-modified-id="Сумма-5.2">Сумма</a></span></li><li><span><a href="#Индекс-элемента" data-toc-modified-id="Индекс-элемента-5.3">Индекс элемента</a></span></li><li><span><a href="#Удаление-элемента" data-toc-modified-id="Удаление-элемента-5.4">Удаление элемента</a></span></li><li><span><a href="#Вставка-элемента" data-toc-modified-id="Вставка-элемента-5.5">Вставка элемента</a></span></li><li><span><a href="#Переворачивание-списка" data-toc-modified-id="Переворачивание-списка-5.6">Переворачивание списка</a></span></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Базовые-операции" data-toc-modified-id="Базовые-операции-1">Базовые операции</a></span><ul class="toc-item"><li><span><a href="#Создание-списка" data-toc-modified-id="Создание-списка-1.1">Создание списка</a></span></li><li><span><a href="#Доступ-к-элементам" data-toc-modified-id="Доступ-к-элементам-1.2">Доступ к элементам</a></span></li><li><span><a href="#Добавление-элемента-в-конец" data-toc-modified-id="Добавление-элемента-в-конец-1.3">Добавление элемента в конец</a></span></li><li><span><a href="#Длина-списка" data-toc-modified-id="Длина-списка-1.4">Длина списка</a></span></li><li><span><a href="#Сортировка" data-toc-modified-id="Сортировка-1.5">Сортировка</a></span></li><li><span><a href="#Сложение" data-toc-modified-id="Сложение-1.6">Сложение</a></span></li><li><span><a href="#Особенности-присваивания-списков" data-toc-modified-id="Особенности-присваивания-списков-1.7">Особенности присваивания списков</a></span></li></ul></li><li><span><a href="#Списки-и-if" data-toc-modified-id="Списки-и-if-2">Списки и if</a></span><ul class="toc-item"><li><span><a href="#Преобразование-к-логическому-значению" data-toc-modified-id="Преобразование-к-логическому-значению-2.1">Преобразование к логическому значению</a></span></li><li><span><a href="#Проверка-наличия-элемента-в-списке" data-toc-modified-id="Проверка-наличия-элемента-в-списке-2.2">Проверка наличия элемента в списке</a></span></li></ul></li><li><span><a href="#Списки-и-for" data-toc-modified-id="Списки-и-for-3">Списки и for</a></span></li><li><span><a href="#Списки-и-строки" data-toc-modified-id="Списки-и-строки-4">Списки и строки</a></span><ul class="toc-item"><li><span><a href="#Split-—-разбиение-строки" data-toc-modified-id="Split-—-разбиение-строки-4.1">Split — разбиение строки</a></span></li><li><span><a href="#Join-—-объединение-строк" data-toc-modified-id="Join-—-объединение-строк-4.2">Join — объединение строк</a></span></li><li><span><a href="#Изменение-символа-строки" data-toc-modified-id="Изменение-символа-строки-4.3">Изменение символа строки</a></span></li></ul></li><li><span><a href="#Распаковка-списков" data-toc-modified-id="Распаковка-списков-5">Распаковка списков</a></span></li><li><span><a href="#Другие-операции" data-toc-modified-id="Другие-операции-6">Другие операции</a></span><ul class="toc-item"><li><span><a href="#Минимум" data-toc-modified-id="Минимум-6.1">Минимум</a></span></li><li><span><a href="#Сумма" data-toc-modified-id="Сумма-6.2">Сумма</a></span></li><li><span><a href="#Индекс-элемента" data-toc-modified-id="Индекс-элемента-6.3">Индекс элемента</a></span></li><li><span><a href="#Удаление-элемента" data-toc-modified-id="Удаление-элемента-6.4">Удаление элемента</a></span></li><li><span><a href="#Вставка-элемента" data-toc-modified-id="Вставка-элемента-6.5">Вставка элемента</a></span></li><li><span><a href="#Переворачивание-списка" data-toc-modified-id="Переворачивание-списка-6.6">Переворачивание списка</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
@@ -11846,13 +11846,80 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-&#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072;&#1084;">&#1044;&#1086;&#1089;&#1090;&#1091;&#1087; &#1082; &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072;&#1084;<a class="anchor-link" href="#&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-&#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072;&#1084;">&#182;</a></h3>
+<p>Можно создать список из однотипных элементов заданной длины:</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="n">N</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[True, True, True, True, True]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-&#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072;&#1084;">&#1044;&#1086;&#1089;&#1090;&#1091;&#1087; &#1082; &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072;&#1084;<a class="anchor-link" href="#&#1044;&#1086;&#1089;&#1090;&#1091;&#1087;-&#1082;-&#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072;&#1084;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Hi&quot;</span><span class="p">]</span> 
@@ -11901,7 +11968,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Hi&quot;</span><span class="p">]</span>
@@ -11933,7 +12000,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">]</span>  <span class="c1"># Элементом списка может быть список</span>
@@ -11980,7 +12047,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -12028,7 +12095,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
@@ -12075,7 +12142,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
@@ -12123,7 +12190,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -12182,7 +12249,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># а - ссылка на список, каждый элемент списка это ссылки на объекты 1, 2, 3, 4</span>
@@ -12207,8 +12274,8 @@ div#notebook {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>id(a) =  140501056432392
-id(b) =  140501056432392
+<pre>id(a) =  140484292987400
+id(b) =  140484292987400
 b = [-1, 2, 3, 4]
 </pre>
 </div>
@@ -12240,7 +12307,7 @@ b = [-1, 2, 3, 4]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
@@ -12264,11 +12331,11 @@ b = [-1, 2, 3, 4]
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>a = 2 , id(a) = 10919456
-b = 2 , id(b) = 10919456
+<pre>a = 2 , id(a) = 10935520
+b = 2 , id(b) = 10935520
 
-a = 3 , id(a) = 10919488
-b = 2 , id(b) = 10919456
+a = 3 , id(a) = 10935552
+b = 2 , id(b) = 10935520
 </pre>
 </div>
 </div>
@@ -12307,7 +12374,7 @@ b = 2 , id(b) = 10919456
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
@@ -12338,7 +12405,7 @@ b = 2 , id(b) = 10919456
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
@@ -12379,7 +12446,7 @@ b = 2 , id(b) = 10919456
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
@@ -12410,7 +12477,7 @@ b = 2 , id(b) = 10919456
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[[]]</span>
@@ -12460,7 +12527,7 @@ b = 2 , id(b) = 10919456
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -12501,7 +12568,7 @@ b = 2 , id(b) = 10919456
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -12549,7 +12616,7 @@ b = 2 , id(b) = 10919456
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]:</span>
@@ -12580,7 +12647,7 @@ b = 2 , id(b) = 10919456
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;ads&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
@@ -12621,7 +12688,7 @@ ads
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -12653,6 +12720,386 @@ ads
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1057;&#1087;&#1080;&#1089;&#1082;&#1080;-&#1080;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">&#1057;&#1087;&#1080;&#1089;&#1082;&#1080; &#1080; &#1089;&#1090;&#1088;&#1086;&#1082;&#1080;<a class="anchor-link" href="#&#1057;&#1087;&#1080;&#1089;&#1082;&#1080;-&#1080;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Split-&#8212;-&#1088;&#1072;&#1079;&#1073;&#1080;&#1077;&#1085;&#1080;&#1077;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">Split &#8212; &#1088;&#1072;&#1079;&#1073;&#1080;&#1077;&#1085;&#1080;&#1077; &#1089;&#1090;&#1088;&#1086;&#1082;&#1080;<a class="anchor-link" href="#Split-&#8212;-&#1088;&#1072;&#1079;&#1073;&#1080;&#1077;&#1085;&#1080;&#1077;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Метод <code>split</code> разбивает строку на список строк по выбранному разделяющему символу или нескольким символам. Например для разбивания строки по символу <code>#</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;1#2#3&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>По умолчанию (без параметров) <code>split</code> разбивает строку по пробельным символам, игнорируя подряд идущие пробельные символы:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="s2">&quot;Artem    Irina  Zhenya&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Artem&#39;, &#39;Irina&#39;, &#39;Zhenya&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Пример строки-разделителя более чем из одной буквы:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;1abc2abcd3&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;1&#39;, &#39;2&#39;, &#39;d3&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Join-&#8212;-&#1086;&#1073;&#1098;&#1077;&#1076;&#1080;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;&#1090;&#1088;&#1086;&#1082;">Join &#8212; &#1086;&#1073;&#1098;&#1077;&#1076;&#1080;&#1085;&#1077;&#1085;&#1080;&#1077; &#1089;&#1090;&#1088;&#1086;&#1082;<a class="anchor-link" href="#Join-&#8212;-&#1086;&#1073;&#1098;&#1077;&#1076;&#1080;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;&#1090;&#1088;&#1086;&#1082;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Метод <code>join</code> возвращает строку, в которой все элементы списка записаны через разделительный символ (символы). Каждый элемент списка обязательно должен быть строкой.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1#2#3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Разделительная строка может быть пустой:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">]))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>123
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Обратите внимание, что разделитель ставится только между строками, и никогда в конце.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Разделитель из нескольких символов:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;apples&#39;</span><span class="p">,</span> <span class="s1">&#39;milk&#39;</span><span class="p">,</span> <span class="s1">&#39;flour&#39;</span><span class="p">,</span> <span class="s1">&#39;jam&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>apples, milk, flour, jam
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Разделитель в виде перевода строки:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;apples&#39;</span><span class="p">,</span> <span class="s1">&#39;milk&#39;</span><span class="p">,</span> <span class="s1">&#39;flour&#39;</span><span class="p">,</span> <span class="s1">&#39;jam&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>apples
+milk
+flour
+jam
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1048;&#1079;&#1084;&#1077;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1072;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">&#1048;&#1079;&#1084;&#1077;&#1085;&#1077;&#1085;&#1080;&#1077; &#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1072; &#1089;&#1090;&#1088;&#1086;&#1082;&#1080;<a class="anchor-link" href="#&#1048;&#1079;&#1084;&#1077;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1072;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Строки являются неизменяемым типом, но достаточно часто встречается ситуация, когда нам нужно изменить один символ в строке. В таких случаях:</p>
+<ul>
+<li>Преобразуют строку к списку и получают список символов (строк, состоящих из одного символа)</li>
+<li>Изменяют один элемент списка</li>
+<li>Список строк склеивают в одну большую строку</li>
+</ul>
+<p>Пример:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;long string&quot;</span>  <span class="c1"># у нас есть строка, мы хотим уметь ее изменять</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>        <span class="c1"># сделаем из строки список символов</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+
+<span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;!&quot;</span>         <span class="c1"># изменим один элемент списка</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>long string
+[&#39;l&#39;, &#39;o&#39;, &#39;n&#39;, &#39;g&#39;, &#39; &#39;, &#39;s&#39;, &#39;t&#39;, &#39;r&#39;, &#39;i&#39;, &#39;n&#39;, &#39;g&#39;]
+[&#39;l&#39;, &#39;o&#39;, &#39;!&#39;, &#39;g&#39;, &#39; &#39;, &#39;s&#39;, &#39;t&#39;, &#39;r&#39;, &#39;i&#39;, &#39;n&#39;, &#39;g&#39;]
+lo!g string
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Также существует другой способ изменить третий символ строки, используя срезы.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#1056;&#1072;&#1089;&#1087;&#1072;&#1082;&#1086;&#1074;&#1082;&#1072;-&#1089;&#1087;&#1080;&#1089;&#1082;&#1086;&#1074;">&#1056;&#1072;&#1089;&#1087;&#1072;&#1082;&#1086;&#1074;&#1082;&#1072; &#1089;&#1087;&#1080;&#1089;&#1082;&#1086;&#1074;<a class="anchor-link" href="#&#1056;&#1072;&#1089;&#1087;&#1072;&#1082;&#1086;&#1074;&#1082;&#1072;-&#1089;&#1087;&#1080;&#1089;&#1082;&#1086;&#1074;">&#182;</a></h2>
 </div>
 </div>
@@ -12671,7 +13118,7 @@ ads
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;abs&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># Присваиваем в явном виде заданный список</span>
@@ -12699,7 +13146,7 @@ ads
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;abs&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -12738,7 +13185,7 @@ ads
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">]]</span>
@@ -12820,7 +13267,7 @@ ads
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -12871,7 +13318,7 @@ ads
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
@@ -12917,7 +13364,7 @@ ads
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -12945,7 +13392,7 @@ ads
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -12965,7 +13412,7 @@ ads
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-26-f4457dd532ff&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-36-84194bde2c42&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> l <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">7</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">]</span>
 <span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>l<span class="ansi-blue-fg">.</span>index<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">115</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>  <span class="ansi-red-fg"># Если элемента нет в списке, то произойдет ошибка выполнения</span>
 
@@ -13019,7 +13466,7 @@ ads
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -13069,7 +13516,7 @@ ads
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -13117,7 +13564,7 @@ ads
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>

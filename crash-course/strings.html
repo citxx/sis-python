@@ -3,8 +3,8 @@
 <head><meta charset="utf-8" />
 <title>strings</title>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="files/require.min.js"></script>
+<script src="files/jquery.min.js"></script>
 
 <style type="text/css">
     /*!
@@ -11739,7 +11739,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="files/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -12517,26 +12517,158 @@ False
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#1069;&#1090;&#1086;&#1090;-&#1082;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;&#1080;&#1090;-&#1074;&#1089;&#1102;-&#1090;&#1072;&#1073;&#1083;&#1080;&#1094;&#1091;-ASCII">&#1069;&#1090;&#1086;&#1090; &#1082;&#1086;&#1076; &#1074;&#1099;&#1074;&#1086;&#1076;&#1080;&#1090; &#1074;&#1089;&#1102; &#1090;&#1072;&#1073;&#1083;&#1080;&#1094;&#1091; ASCII<a class="anchor-link" href="#&#1069;&#1090;&#1086;&#1090;-&#1082;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;&#1080;&#1090;-&#1074;&#1089;&#1102;-&#1090;&#1072;&#1073;&#1083;&#1080;&#1094;&#1091;-ASCII">&#182;</a></h1><p>for code in range(128):
-    print('chr(' + str(code) + ') =', repr(chr(code)))</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Этот код выводит всю таблицу ASCII</span>
+<span class="k">for</span> <span class="n">code</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;chr(&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;) =&#39;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">code</span><span class="p">)))</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>chr(0) = &#39;\x00&#39;
+chr(1) = &#39;\x01&#39;
+chr(2) = &#39;\x02&#39;
+chr(3) = &#39;\x03&#39;
+chr(4) = &#39;\x04&#39;
+chr(5) = &#39;\x05&#39;
+chr(6) = &#39;\x06&#39;
+chr(7) = &#39;\x07&#39;
+chr(8) = &#39;\x08&#39;
+chr(9) = &#39;\t&#39;
+chr(10) = &#39;\n&#39;
+chr(11) = &#39;\x0b&#39;
+chr(12) = &#39;\x0c&#39;
+chr(13) = &#39;\r&#39;
+chr(14) = &#39;\x0e&#39;
+chr(15) = &#39;\x0f&#39;
+chr(16) = &#39;\x10&#39;
+chr(17) = &#39;\x11&#39;
+chr(18) = &#39;\x12&#39;
+chr(19) = &#39;\x13&#39;
+chr(20) = &#39;\x14&#39;
+chr(21) = &#39;\x15&#39;
+chr(22) = &#39;\x16&#39;
+chr(23) = &#39;\x17&#39;
+chr(24) = &#39;\x18&#39;
+chr(25) = &#39;\x19&#39;
+chr(26) = &#39;\x1a&#39;
+chr(27) = &#39;\x1b&#39;
+chr(28) = &#39;\x1c&#39;
+chr(29) = &#39;\x1d&#39;
+chr(30) = &#39;\x1e&#39;
+chr(31) = &#39;\x1f&#39;
+chr(32) = &#39; &#39;
+chr(33) = &#39;!&#39;
+chr(34) = &#39;&#34;&#39;
+chr(35) = &#39;#&#39;
+chr(36) = &#39;$&#39;
+chr(37) = &#39;%&#39;
+chr(38) = &#39;&amp;&#39;
+chr(39) = &#34;&#39;&#34;
+chr(40) = &#39;(&#39;
+chr(41) = &#39;)&#39;
+chr(42) = &#39;*&#39;
+chr(43) = &#39;+&#39;
+chr(44) = &#39;,&#39;
+chr(45) = &#39;-&#39;
+chr(46) = &#39;.&#39;
+chr(47) = &#39;/&#39;
+chr(48) = &#39;0&#39;
+chr(49) = &#39;1&#39;
+chr(50) = &#39;2&#39;
+chr(51) = &#39;3&#39;
+chr(52) = &#39;4&#39;
+chr(53) = &#39;5&#39;
+chr(54) = &#39;6&#39;
+chr(55) = &#39;7&#39;
+chr(56) = &#39;8&#39;
+chr(57) = &#39;9&#39;
+chr(58) = &#39;:&#39;
+chr(59) = &#39;;&#39;
+chr(60) = &#39;&lt;&#39;
+chr(61) = &#39;=&#39;
+chr(62) = &#39;&gt;&#39;
+chr(63) = &#39;?&#39;
+chr(64) = &#39;@&#39;
+chr(65) = &#39;A&#39;
+chr(66) = &#39;B&#39;
+chr(67) = &#39;C&#39;
+chr(68) = &#39;D&#39;
+chr(69) = &#39;E&#39;
+chr(70) = &#39;F&#39;
+chr(71) = &#39;G&#39;
+chr(72) = &#39;H&#39;
+chr(73) = &#39;I&#39;
+chr(74) = &#39;J&#39;
+chr(75) = &#39;K&#39;
+chr(76) = &#39;L&#39;
+chr(77) = &#39;M&#39;
+chr(78) = &#39;N&#39;
+chr(79) = &#39;O&#39;
+chr(80) = &#39;P&#39;
+chr(81) = &#39;Q&#39;
+chr(82) = &#39;R&#39;
+chr(83) = &#39;S&#39;
+chr(84) = &#39;T&#39;
+chr(85) = &#39;U&#39;
+chr(86) = &#39;V&#39;
+chr(87) = &#39;W&#39;
+chr(88) = &#39;X&#39;
+chr(89) = &#39;Y&#39;
+chr(90) = &#39;Z&#39;
+chr(91) = &#39;[&#39;
+chr(92) = &#39;\\&#39;
+chr(93) = &#39;]&#39;
+chr(94) = &#39;^&#39;
+chr(95) = &#39;_&#39;
+chr(96) = &#39;`&#39;
+chr(97) = &#39;a&#39;
+chr(98) = &#39;b&#39;
+chr(99) = &#39;c&#39;
+chr(100) = &#39;d&#39;
+chr(101) = &#39;e&#39;
+chr(102) = &#39;f&#39;
+chr(103) = &#39;g&#39;
+chr(104) = &#39;h&#39;
+chr(105) = &#39;i&#39;
+chr(106) = &#39;j&#39;
+chr(107) = &#39;k&#39;
+chr(108) = &#39;l&#39;
+chr(109) = &#39;m&#39;
+chr(110) = &#39;n&#39;
+chr(111) = &#39;o&#39;
+chr(112) = &#39;p&#39;
+chr(113) = &#39;q&#39;
+chr(114) = &#39;r&#39;
+chr(115) = &#39;s&#39;
+chr(116) = &#39;t&#39;
+chr(117) = &#39;u&#39;
+chr(118) = &#39;v&#39;
+chr(119) = &#39;w&#39;
+chr(120) = &#39;x&#39;
+chr(121) = &#39;y&#39;
+chr(122) = &#39;z&#39;
+chr(123) = &#39;{&#39;
+chr(124) = &#39;|&#39;
+chr(125) = &#39;}&#39;
+chr(126) = &#39;~&#39;
+chr(127) = &#39;\x7f&#39;
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
