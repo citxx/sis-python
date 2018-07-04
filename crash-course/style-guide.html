@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>code-style</title>
+<title>style-guide</title>
 
 <script src="files/require.min.js"></script>
 <script src="files/jquery.min.js"></script>
@@ -11769,7 +11769,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Содержание<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Что-такое-стиль-программирования?" data-toc-modified-id="Что-такое-стиль-программирования?-1">Что такое стиль программирования?</a></span></li><li><span><a href="#Вы-будете-проверять-все-мои-решения-на-соответствие-стилю?" data-toc-modified-id="Вы-будете-проверять-все-мои-решения-на-соответствие-стилю?-2">Вы будете проверять все мои решения на соответствие стилю?</a></span></li><li><span><a href="#Но-зачем?-Я-и-так-всё-понимаю-в-своей-программе" data-toc-modified-id="Но-зачем?-Я-и-так-всё-понимаю-в-своей-программе-3">Но зачем? Я и так всё понимаю в своей программе</a></span></li><li><span><a href="#Но-сейчас-то-мне-это-не-нужно" data-toc-modified-id="Но-сейчас-то-мне-это-не-нужно-4">Но сейчас-то мне это не нужно</a></span></li><li><span><a href="#За-что-мне-это?" data-toc-modified-id="За-что-мне-это?-5">За что мне это?</a></span></li><li><span><a href="#Хорошо,-я-готов-следовать-стилю.-Как?" data-toc-modified-id="Хорошо,-я-готов-следовать-стилю.-Как?-6">Хорошо, я готов следовать стилю. Как?</a></span></li><li><span><a href="#Я-всё-правильно-написал,-но-ejudge-говорит,-что-что-то-не-так.-Что-делать?" data-toc-modified-id="Я-всё-правильно-написал,-но-ejudge-говорит,-что-что-то-не-так.-Что-делать?-7">Я всё правильно написал, но ejudge говорит, что что-то не так. Что делать?</a></span></li><li><span><a href="#Здесь-нет-ответа-на-мой-вопрос.-Что-делать?" data-toc-modified-id="Здесь-нет-ответа-на-мой-вопрос.-Что-делать?-8">Здесь нет ответа на мой вопрос. Что делать?</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Форматирование" data-toc-modified-id="Форматирование-1">Форматирование</a></span><ul class="toc-item"><li><span><a href="#Используйте-4-пробела-для-отступов" data-toc-modified-id="Используйте-4-пробела-для-отступов-1.1">Используйте 4 пробела для отступов</a></span></li><li><span><a href="#Никогда-не-смешивайте-пробелы-и-символы-табуляции" data-toc-modified-id="Никогда-не-смешивайте-пробелы-и-символы-табуляции-1.2">Никогда не смешивайте пробелы и символы табуляции</a></span></li><li><span><a href="#Не-делайте-строки-длиннее-79-символов" data-toc-modified-id="Не-делайте-строки-длиннее-79-символов-1.3">Не делайте строки длиннее 79 символов</a></span></li><li><span><a href="#Пишите-import-каждого-модуля-в-отдельной-строке" data-toc-modified-id="Пишите-import-каждого-модуля-в-отдельной-строке-1.4">Пишите import каждого модуля в отдельной строке</a></span></li><li><span><a href="#Располагайте-import'ы-в-самом-начале-файла" data-toc-modified-id="Располагайте-import'ы-в-самом-начале-файла-1.5">Располагайте import'ы в самом начале файла</a></span></li><li><span><a href="#Не-ставьте-пробелов-сразу-после-скобок" data-toc-modified-id="Не-ставьте-пробелов-сразу-после-скобок-1.6">Не ставьте пробелов сразу после скобок</a></span></li><li><span><a href="#Не-ставьте-пробелов-перед-скобками" data-toc-modified-id="Не-ставьте-пробелов-перед-скобками-1.7">Не ставьте пробелов перед скобками</a></span></li><li><span><a href="#Не-ставьте-пробелов-перед-запятой,-точкой-с-запятой,-двоеточием" data-toc-modified-id="Не-ставьте-пробелов-перед-запятой,-точкой-с-запятой,-двоеточием-1.8">Не ставьте пробелов перед запятой, точкой с запятой, двоеточием</a></span></li><li><span><a href="#Окружайте-бинарные-операторы-ровно-одним-пробелом-с-каждой-стороны" data-toc-modified-id="Окружайте-бинарные-операторы-ровно-одним-пробелом-с-каждой-стороны-1.9">Окружайте бинарные операторы ровно одним пробелом с каждой стороны</a></span></li><li><span><a href="#Не-пишите-в-одну-строку" data-toc-modified-id="Не-пишите-в-одну-строку-1.10">Не пишите в одну строку</a></span></li></ul></li><li><span><a href="#Комментарии" data-toc-modified-id="Комментарии-2">Комментарии</a></span></li><li><span><a href="#Имена" data-toc-modified-id="Имена-3">Имена</a></span><ul class="toc-item"><li><span><a href="#Переменные-и-функции" data-toc-modified-id="Переменные-и-функции-3.1">Переменные и функции</a></span></li><li><span><a href="#Константы" data-toc-modified-id="Константы-3.2">Константы</a></span></li></ul></li><li><span><a href="#Сравнения" data-toc-modified-id="Сравнения-4">Сравнения</a></span><ul class="toc-item"><li><span><a href="#Проверка-последовательности-на-пустоту" data-toc-modified-id="Проверка-последовательности-на-пустоту-4.1">Проверка последовательности на пустоту</a></span></li><li><span><a href="#Сравнение-с-True-и-False?!" data-toc-modified-id="Сравнение-с-True-и-False?!-4.2">Сравнение с True и False?!</a></span></li><li><span><a href="#Сравнение-с-None" data-toc-modified-id="Сравнение-с-None-4.3">Сравнение с None</a></span></li><li><span><a href="#Сравнение-с-частью-строки" data-toc-modified-id="Сравнение-с-частью-строки-4.4">Сравнение с частью строки</a></span></li></ul></li><li><span><a href="#Функции" data-toc-modified-id="Функции-5">Функции</a></span><ul class="toc-item"><li><span><a href="#Исключения-из-правил" data-toc-modified-id="Исключения-из-правил-5.1">Исключения из правил</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
@@ -11778,7 +11778,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#1057;&#1090;&#1080;&#1083;&#1100;-&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;:-&#1063;&#1072;&#1042;&#1086;">&#1057;&#1090;&#1080;&#1083;&#1100; &#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;: &#1063;&#1072;&#1042;&#1086;<a class="anchor-link" href="#&#1057;&#1090;&#1080;&#1083;&#1100;-&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;:-&#1063;&#1072;&#1042;&#1086;">&#182;</a></h1>
+<h1 id="&#1057;&#1090;&#1080;&#1083;&#1100;">&#1057;&#1090;&#1080;&#1083;&#1100;<a class="anchor-link" href="#&#1057;&#1090;&#1080;&#1083;&#1100;">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11787,7 +11787,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1063;&#1090;&#1086;-&#1090;&#1072;&#1082;&#1086;&#1077;-&#1089;&#1090;&#1080;&#1083;&#1100;-&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;?">&#1063;&#1090;&#1086; &#1090;&#1072;&#1082;&#1086;&#1077; &#1089;&#1090;&#1080;&#1083;&#1100; &#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;?<a class="anchor-link" href="#&#1063;&#1090;&#1086;-&#1090;&#1072;&#1082;&#1086;&#1077;-&#1089;&#1090;&#1080;&#1083;&#1100;-&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;?">&#182;</a></h2>
+<h2 id="&#1060;&#1086;&#1088;&#1084;&#1072;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;">&#1060;&#1086;&#1088;&#1084;&#1072;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;<a class="anchor-link" href="#&#1060;&#1086;&#1088;&#1084;&#1072;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11796,66 +11796,227 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Это набор правил, следуя которым можно писать легкочитаемый и понятный код.</p>
-<p>Полный список правил можно найти <a href="style-guide.html">тут</a>.</p>
-<p>Вкратце, стиль — это о том, чтобы писать так:</p>
-<div class="highlight"><pre><span></span><span class="n">TODO</span>
+<h3 id="&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1091;&#1081;&#1090;&#1077;-4-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1072;-&#1076;&#1083;&#1103;-&#1086;&#1090;&#1089;&#1090;&#1091;&#1087;&#1086;&#1074;">&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1091;&#1081;&#1090;&#1077; 4 &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1072; &#1076;&#1083;&#1103; &#1086;&#1090;&#1089;&#1090;&#1091;&#1087;&#1086;&#1074;<a class="anchor-link" href="#&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1091;&#1081;&#1090;&#1077;-4-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1072;-&#1076;&#1083;&#1103;-&#1086;&#1090;&#1089;&#1090;&#1091;&#1087;&#1086;&#1074;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">if</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-<p>а не так:</p>
-<div class="highlight"><pre><span></span><span class="n">TODO</span>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">if</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="k">if</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-<p>Идеал — посмотрев на любую строчку вашей программы можно понять, что эта строчка делает, даже не зная ничего обо всей остальной программе.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1042;&#1099;-&#1073;&#1091;&#1076;&#1077;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1074;&#1077;&#1088;&#1103;&#1090;&#1100;-&#1074;&#1089;&#1077;-&#1084;&#1086;&#1080;-&#1088;&#1077;&#1096;&#1077;&#1085;&#1080;&#1103;-&#1085;&#1072;-&#1089;&#1086;&#1086;&#1090;&#1074;&#1077;&#1090;&#1089;&#1090;&#1074;&#1080;&#1077;-&#1089;&#1090;&#1080;&#1083;&#1102;?">&#1042;&#1099; &#1073;&#1091;&#1076;&#1077;&#1090;&#1077; &#1087;&#1088;&#1086;&#1074;&#1077;&#1088;&#1103;&#1090;&#1100; &#1074;&#1089;&#1077; &#1084;&#1086;&#1080; &#1088;&#1077;&#1096;&#1077;&#1085;&#1080;&#1103; &#1085;&#1072; &#1089;&#1086;&#1086;&#1090;&#1074;&#1077;&#1090;&#1089;&#1090;&#1074;&#1080;&#1077; &#1089;&#1090;&#1080;&#1083;&#1102;?<a class="anchor-link" href="#&#1042;&#1099;-&#1073;&#1091;&#1076;&#1077;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1074;&#1077;&#1088;&#1103;&#1090;&#1100;-&#1074;&#1089;&#1077;-&#1084;&#1086;&#1080;-&#1088;&#1077;&#1096;&#1077;&#1085;&#1080;&#1103;-&#1085;&#1072;-&#1089;&#1086;&#1086;&#1090;&#1074;&#1077;&#1090;&#1089;&#1090;&#1074;&#1080;&#1077;-&#1089;&#1090;&#1080;&#1083;&#1102;?">&#182;</a></h2>
-</div>
-</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Да.</p>
-<p>Если нам будет сложно понять ваш код или если на это будет уходить слишком времени, мы будем ставить вам вердикт <code>Нарушение правил оформления программ</code> или <code>Решение отклонено</code> с комментарием о том, что именно не так.</p>
+<h3 id="&#1053;&#1080;&#1082;&#1086;&#1075;&#1076;&#1072;-&#1085;&#1077;-&#1089;&#1084;&#1077;&#1096;&#1080;&#1074;&#1072;&#1081;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1099;-&#1080;-&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1099;-&#1090;&#1072;&#1073;&#1091;&#1083;&#1103;&#1094;&#1080;&#1080;">&#1053;&#1080;&#1082;&#1086;&#1075;&#1076;&#1072; &#1085;&#1077; &#1089;&#1084;&#1077;&#1096;&#1080;&#1074;&#1072;&#1081;&#1090;&#1077; &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1099; &#1080; &#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1099; &#1090;&#1072;&#1073;&#1091;&#1083;&#1103;&#1094;&#1080;&#1080;<a class="anchor-link" href="#&#1053;&#1080;&#1082;&#1086;&#1075;&#1076;&#1072;-&#1085;&#1077;-&#1089;&#1084;&#1077;&#1096;&#1080;&#1074;&#1072;&#1081;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1099;-&#1080;-&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1099;-&#1090;&#1072;&#1073;&#1091;&#1083;&#1103;&#1094;&#1080;&#1080;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1053;&#1077;-&#1076;&#1077;&#1083;&#1072;&#1081;&#1090;&#1077;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;-&#1076;&#1083;&#1080;&#1085;&#1085;&#1077;&#1077;-79-&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1086;&#1074;">&#1053;&#1077; &#1076;&#1077;&#1083;&#1072;&#1081;&#1090;&#1077; &#1089;&#1090;&#1088;&#1086;&#1082;&#1080; &#1076;&#1083;&#1080;&#1085;&#1085;&#1077;&#1077; 79 &#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1086;&#1074;<a class="anchor-link" href="#&#1053;&#1077;-&#1076;&#1077;&#1083;&#1072;&#1081;&#1090;&#1077;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;-&#1076;&#1083;&#1080;&#1085;&#1085;&#1077;&#1077;-79-&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1086;&#1074;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Разделяйте строки на несколько с помощью заключения выражения в скобки. Это способ лучше, чем использование обратного слэша. Делайте соответствующий отступ при переносе. При разбиении строки около бинарного оператора делайте разрыв <strong>после</strong> него.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1053;&#1086;-&#1079;&#1072;&#1095;&#1077;&#1084;?-&#1071;-&#1080;-&#1090;&#1072;&#1082;-&#1074;&#1089;&#1105;-&#1087;&#1086;&#1085;&#1080;&#1084;&#1072;&#1102;-&#1074;-&#1089;&#1074;&#1086;&#1077;&#1081;-&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1077;">&#1053;&#1086; &#1079;&#1072;&#1095;&#1077;&#1084;? &#1071; &#1080; &#1090;&#1072;&#1082; &#1074;&#1089;&#1105; &#1087;&#1086;&#1085;&#1080;&#1084;&#1072;&#1102; &#1074; &#1089;&#1074;&#1086;&#1077;&#1081; &#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1077;<a class="anchor-link" href="#&#1053;&#1086;-&#1079;&#1072;&#1095;&#1077;&#1084;?-&#1071;-&#1080;-&#1090;&#1072;&#1082;-&#1074;&#1089;&#1105;-&#1087;&#1086;&#1085;&#1080;&#1084;&#1072;&#1102;-&#1074;-&#1089;&#1074;&#1086;&#1077;&#1081;-&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1077;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Это ненадолго.</p>
-<p>Сейчас ваши программы редко превышают <em>30-50 строк</em>. Такой небольшой код можно целиком держать в голове. Довольно скоро размер ваших программ будет достигать <em>нескольких сотен строк</em>. А с тем, чтобы держать в голове одновременно столько кода, не справляются даже многие профессиональные программисты.</p>
-<p>К счастью, в этом нет необходимости. Если ваш код хорошо написан, вам не обязательно в подробностях помнить, что происходит в предыдущих ста строках вашей программы.</p>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">var</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span>
+       <span class="n">b</span> <span class="o">/</span> <span class="mi">15</span><span class="p">)</span>
+</pre></div>
 
 </div>
 </div>
 </div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">var</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">10</span> \
+    <span class="o">+</span> <span class="n">b</span> <span class="o">/</span> <span class="mi">15</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1053;&#1086;-&#1089;&#1077;&#1081;&#1095;&#1072;&#1089;-&#1090;&#1086;-&#1084;&#1085;&#1077;-&#1101;&#1090;&#1086;-&#1085;&#1077;-&#1085;&#1091;&#1078;&#1085;&#1086;">&#1053;&#1086; &#1089;&#1077;&#1081;&#1095;&#1072;&#1089;-&#1090;&#1086; &#1084;&#1085;&#1077; &#1101;&#1090;&#1086; &#1085;&#1077; &#1085;&#1091;&#1078;&#1085;&#1086;<a class="anchor-link" href="#&#1053;&#1086;-&#1089;&#1077;&#1081;&#1095;&#1072;&#1089;-&#1090;&#1086;-&#1084;&#1085;&#1077;-&#1101;&#1090;&#1086;-&#1085;&#1077;-&#1085;&#1091;&#1078;&#1085;&#1086;">&#182;</a></h2>
+<h3 id="&#1055;&#1080;&#1096;&#1080;&#1090;&#1077;-import-&#1082;&#1072;&#1078;&#1076;&#1086;&#1075;&#1086;-&#1084;&#1086;&#1076;&#1091;&#1083;&#1103;-&#1074;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1100;&#1085;&#1086;&#1081;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1077;">&#1055;&#1080;&#1096;&#1080;&#1090;&#1077; import &#1082;&#1072;&#1078;&#1076;&#1086;&#1075;&#1086; &#1084;&#1086;&#1076;&#1091;&#1083;&#1103; &#1074; &#1086;&#1090;&#1076;&#1077;&#1083;&#1100;&#1085;&#1086;&#1081; &#1089;&#1090;&#1088;&#1086;&#1082;&#1077;<a class="anchor-link" href="#&#1055;&#1080;&#1096;&#1080;&#1090;&#1077;-import-&#1082;&#1072;&#1078;&#1076;&#1086;&#1075;&#1086;-&#1084;&#1086;&#1076;&#1091;&#1083;&#1103;-&#1074;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1100;&#1085;&#1086;&#1081;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1077;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="kn">import</span> <span class="nn">math</span><span class="o">,</span> <span class="nn">sys</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1056;&#1072;&#1089;&#1087;&#1086;&#1083;&#1072;&#1075;&#1072;&#1081;&#1090;&#1077;-import'&#1099;-&#1074;-&#1089;&#1072;&#1084;&#1086;&#1084;-&#1085;&#1072;&#1095;&#1072;&#1083;&#1077;-&#1092;&#1072;&#1081;&#1083;&#1072;">&#1056;&#1072;&#1089;&#1087;&#1086;&#1083;&#1072;&#1075;&#1072;&#1081;&#1090;&#1077; import'&#1099; &#1074; &#1089;&#1072;&#1084;&#1086;&#1084; &#1085;&#1072;&#1095;&#1072;&#1083;&#1077; &#1092;&#1072;&#1081;&#1083;&#1072;<a class="anchor-link" href="#&#1056;&#1072;&#1089;&#1087;&#1086;&#1083;&#1072;&#1075;&#1072;&#1081;&#1090;&#1077;-import'&#1099;-&#1074;-&#1089;&#1072;&#1084;&#1086;&#1084;-&#1085;&#1072;&#1095;&#1072;&#1083;&#1077;-&#1092;&#1072;&#1081;&#1083;&#1072;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+    <span class="k">pass</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1089;&#1088;&#1072;&#1079;&#1091;-&#1087;&#1086;&#1089;&#1083;&#1077;-&#1089;&#1082;&#1086;&#1073;&#1086;&#1082;">&#1053;&#1077; &#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077; &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074; &#1089;&#1088;&#1072;&#1079;&#1091; &#1087;&#1086;&#1089;&#1083;&#1077; &#1089;&#1082;&#1086;&#1073;&#1086;&#1082;<a class="anchor-link" href="#&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1089;&#1088;&#1072;&#1079;&#1091;-&#1087;&#1086;&#1089;&#1083;&#1077;-&#1089;&#1082;&#1086;&#1073;&#1086;&#1082;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">spam</span><span class="p">(</span><span class="n">ham</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">{</span><span class="n">eggs</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">spam</span><span class="p">(</span> <span class="n">ham</span><span class="p">[</span> <span class="mi">1</span> <span class="p">],</span> <span class="p">{</span> <span class="n">eggs</span><span class="p">:</span> <span class="mi">2</span> <span class="p">}</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1087;&#1077;&#1088;&#1077;&#1076;-&#1089;&#1082;&#1086;&#1073;&#1082;&#1072;&#1084;&#1080;">&#1053;&#1077; &#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077; &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074; &#1087;&#1077;&#1088;&#1077;&#1076; &#1089;&#1082;&#1086;&#1073;&#1082;&#1072;&#1084;&#1080;<a class="anchor-link" href="#&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1087;&#1077;&#1088;&#1077;&#1076;-&#1089;&#1082;&#1086;&#1073;&#1082;&#1072;&#1084;&#1080;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11864,131 +12025,723 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Во-первых, это не совсем так. Например:</p>
 <ul>
-<li>Уже сейчас вы можете освободить ресурсы мозга от того, чтобы держать в голове всю программу, и использовать их для того, чтобы написать правильно конкретно этот кусок.</li>
-<li>В хорошем коде гораздо проще найти ошибку</li>
-<li>Из хорошо написанного для вчерашней задачи кода можно легко взять кусок и использовать его для сегодняшней задачи</li>
+<li>Перед открывающей круглой скобкой при вызове функции</li>
+<li>Перед открывающей квадратной скобкой, обозначающей индексирование или срез</li>
 </ul>
-<p>Помимо этого ваш код читают преподаватели. Хороший код позволяет нам:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">spam</span><span class="p">(</span><span class="n">kind</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">spam</span> <span class="p">(</span><span class="n">kind</span> <span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">],</span> <span class="n">lst</span> <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1087;&#1077;&#1088;&#1077;&#1076;-&#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;,-&#1090;&#1086;&#1095;&#1082;&#1086;&#1081;-&#1089;-&#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;,-&#1076;&#1074;&#1086;&#1077;&#1090;&#1086;&#1095;&#1080;&#1077;&#1084;">&#1053;&#1077; &#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077; &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074; &#1087;&#1077;&#1088;&#1077;&#1076; &#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;, &#1090;&#1086;&#1095;&#1082;&#1086;&#1081; &#1089; &#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;, &#1076;&#1074;&#1086;&#1077;&#1090;&#1086;&#1095;&#1080;&#1077;&#1084;<a class="anchor-link" href="#&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1087;&#1077;&#1088;&#1077;&#1076;-&#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;,-&#1090;&#1086;&#1095;&#1082;&#1086;&#1081;-&#1089;-&#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;,-&#1076;&#1074;&#1086;&#1077;&#1090;&#1086;&#1095;&#1080;&#1077;&#1084;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="p">;</span> <span class="n">x</span> <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="p">,</span> <span class="n">x</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1054;&#1082;&#1088;&#1091;&#1078;&#1072;&#1081;&#1090;&#1077;-&#1073;&#1080;&#1085;&#1072;&#1088;&#1085;&#1099;&#1077;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1099;-&#1088;&#1086;&#1074;&#1085;&#1086;-&#1086;&#1076;&#1085;&#1080;&#1084;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1084;-&#1089;-&#1082;&#1072;&#1078;&#1076;&#1086;&#1081;-&#1089;&#1090;&#1086;&#1088;&#1086;&#1085;&#1099;">&#1054;&#1082;&#1088;&#1091;&#1078;&#1072;&#1081;&#1090;&#1077; &#1073;&#1080;&#1085;&#1072;&#1088;&#1085;&#1099;&#1077; &#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1099; &#1088;&#1086;&#1074;&#1085;&#1086; &#1086;&#1076;&#1085;&#1080;&#1084; &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1084; &#1089; &#1082;&#1072;&#1078;&#1076;&#1086;&#1081; &#1089;&#1090;&#1086;&#1088;&#1086;&#1085;&#1099;<a class="anchor-link" href="#&#1054;&#1082;&#1088;&#1091;&#1078;&#1072;&#1081;&#1090;&#1077;-&#1073;&#1080;&#1085;&#1072;&#1088;&#1085;&#1099;&#1077;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1099;-&#1088;&#1086;&#1074;&#1085;&#1086;-&#1086;&#1076;&#1085;&#1080;&#1084;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1084;-&#1089;-&#1082;&#1072;&#1078;&#1076;&#1086;&#1081;-&#1089;&#1090;&#1086;&#1088;&#1086;&#1085;&#1099;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Верно для операторов:</p>
 <ul>
-<li>Быстро разобраться в вашей программе и поставить ОК вашему решению</li>
-<li>Быстро найти в вашем коде ошибку, если вам понадобится помощь</li>
-<li>Заметить потенциальные проблемы в том, как вы пишите код, и рассказать вам как не наступить на эти грабли потом на олимпиаде</li>
-</ul>
-<p>Ну и жизнь не заканчивается на дипломе всероса и поступлении в ВУЗ. Если вы пойдёте работать программистом, ваш код будет читать очень много людей.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1047;&#1072;-&#1095;&#1090;&#1086;-&#1084;&#1085;&#1077;-&#1101;&#1090;&#1086;?">&#1047;&#1072; &#1095;&#1090;&#1086; &#1084;&#1085;&#1077; &#1101;&#1090;&#1086;?<a class="anchor-link" href="#&#1047;&#1072;-&#1095;&#1090;&#1086;-&#1084;&#1085;&#1077;-&#1101;&#1090;&#1086;?">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>По началу написание читаемого кода будет требовать дополнительных усилий и даже немного отвлекать от основной задачи. Но довольно скоро писать читаемый код войдёт у вас в привычку и вы будете делать это автоматически.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1061;&#1086;&#1088;&#1086;&#1096;&#1086;,-&#1103;-&#1075;&#1086;&#1090;&#1086;&#1074;-&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1100;-&#1089;&#1090;&#1080;&#1083;&#1102;.-&#1050;&#1072;&#1082;?">&#1061;&#1086;&#1088;&#1086;&#1096;&#1086;, &#1103; &#1075;&#1086;&#1090;&#1086;&#1074; &#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1100; &#1089;&#1090;&#1080;&#1083;&#1102;. &#1050;&#1072;&#1082;?<a class="anchor-link" href="#&#1061;&#1086;&#1088;&#1086;&#1096;&#1086;,-&#1103;-&#1075;&#1086;&#1090;&#1086;&#1074;-&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1100;-&#1089;&#1090;&#1080;&#1083;&#1102;.-&#1050;&#1072;&#1082;?">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Для начала стоит посмотреть на примеры хорошего и плохого кода в <a href="style-guide.html">списке правил оформления</a>. Правила про незнакомые вам возможности Python пока можно игнорировать.</p>
-<p>Проверка стиля производится только после того, как ваша программа прошла все тесты и происходит в два этапа:</p>
-<ol>
-<li>Тестирующая система автоматически проверяет ваш код ваш код на простые ошибки:<ul>
-<li>Если ошибки обнаружены, ваша программа получит статус <code>Нарушение правил оформления программ</code>. В этом случае вам надо исправить ошибку и послать код ещё раз.</li>
-<li>Если всё хорошо, ваша программа получит статус <code>Ожидает проверки</code></li>
-</ul>
-</li>
-<li>Преподаватели читают ваш код:<ul>
-<li>Если что-то надо исправить, мы ставим статус <code>Решение отклонено</code> с комментарием, что именно не так</li>
-<li>Если всё хорошо, то мы ставим статус <code>ОК</code></li>
-</ul>
-</li>
-</ol>
-<p><strong>Частая ошибка:</strong> сначала писать код кое как и исправлять стиль перед отправлением на проверку. Так вы добровольно:</p>
-<ul>
-<li>Отказываетесь от преимущества для себя, постоянно читая нечитаемый код в процессе его написания</li>
-<li>Замедляете выработку привычки писать сразу понятно</li>
+<li>Присваивания (<code>=</code>, <code>+=</code>, <code>-=</code> и т.д.)</li>
+<li>Сравнения (<code>==</code>, <code>&lt;</code>, <code>&gt;</code>, <code>!=</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>in</code>, <code>not in</code>, <code>is</code>, <code>is not</code>)</li>
+<li>Логических (<code>and</code>, <code>or</code>, <code>not</code>)</li>
+<li>Арифметических (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code> и т.д.)</li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1071;-&#1074;&#1089;&#1105;-&#1087;&#1088;&#1072;&#1074;&#1080;&#1083;&#1100;&#1085;&#1086;-&#1085;&#1072;&#1087;&#1080;&#1089;&#1072;&#1083;,-&#1085;&#1086;-ejudge-&#1075;&#1086;&#1074;&#1086;&#1088;&#1080;&#1090;,-&#1095;&#1090;&#1086;-&#1095;&#1090;&#1086;-&#1090;&#1086;-&#1085;&#1077;-&#1090;&#1072;&#1082;.-&#1063;&#1090;&#1086;-&#1076;&#1077;&#1083;&#1072;&#1090;&#1100;?">&#1071; &#1074;&#1089;&#1105; &#1087;&#1088;&#1072;&#1074;&#1080;&#1083;&#1100;&#1085;&#1086; &#1085;&#1072;&#1087;&#1080;&#1089;&#1072;&#1083;, &#1085;&#1086; ejudge &#1075;&#1086;&#1074;&#1086;&#1088;&#1080;&#1090;, &#1095;&#1090;&#1086; &#1095;&#1090;&#1086;-&#1090;&#1086; &#1085;&#1077; &#1090;&#1072;&#1082;. &#1063;&#1090;&#1086; &#1076;&#1077;&#1083;&#1072;&#1090;&#1100;?<a class="anchor-link" href="#&#1071;-&#1074;&#1089;&#1105;-&#1087;&#1088;&#1072;&#1074;&#1080;&#1083;&#1100;&#1085;&#1086;-&#1085;&#1072;&#1087;&#1080;&#1089;&#1072;&#1083;,-&#1085;&#1086;-ejudge-&#1075;&#1086;&#1074;&#1086;&#1088;&#1080;&#1090;,-&#1095;&#1090;&#1086;-&#1095;&#1090;&#1086;-&#1090;&#1086;-&#1085;&#1077;-&#1090;&#1072;&#1082;.-&#1063;&#1090;&#1086;-&#1076;&#1077;&#1083;&#1072;&#1090;&#1100;?">&#182;</a></h2>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+<span class="n">a</span> <span class="ow">and</span> <span class="n">b</span>
+<span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">8</span>
+</pre></div>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>В протоколе проверки будет указана причина, но по-английски. При этом в нём будут указаны конкретная строка и место ошибки. Вот пример протокола:</p>
-
-<pre><code>000310.py:3:12: E222 multiple spaces after operator
-    list1 =  list1[x:] + list1[:x]
-           ^
-
-
-</code></pre>
-<p>Конкретно отсюда можно узнать, что проблема в 12-й строке сразу после знака <code>=</code>. Конкретно — два пробела вместо одного.</p>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">a</span><span class="o">==</span><span class="n">b</span>
+<span class="n">a</span>  <span class="ow">and</span>   <span class="n">b</span>
+<span class="mi">3</span><span class="o">+</span><span class="mi">5</span>  <span class="o">*</span>  <span class="mi">8</span>
+</pre></div>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Если не получается самостоятельно разобраться в причине, спросите у преподавателя.</p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1047;&#1076;&#1077;&#1089;&#1100;-&#1085;&#1077;&#1090;-&#1086;&#1090;&#1074;&#1077;&#1090;&#1072;-&#1085;&#1072;-&#1084;&#1086;&#1081;-&#1074;&#1086;&#1087;&#1088;&#1086;&#1089;.-&#1063;&#1090;&#1086;-&#1076;&#1077;&#1083;&#1072;&#1090;&#1100;?">&#1047;&#1076;&#1077;&#1089;&#1100; &#1085;&#1077;&#1090; &#1086;&#1090;&#1074;&#1077;&#1090;&#1072; &#1085;&#1072; &#1084;&#1086;&#1081; &#1074;&#1086;&#1087;&#1088;&#1086;&#1089;. &#1063;&#1090;&#1086; &#1076;&#1077;&#1083;&#1072;&#1090;&#1100;?<a class="anchor-link" href="#&#1047;&#1076;&#1077;&#1089;&#1100;-&#1085;&#1077;&#1090;-&#1086;&#1090;&#1074;&#1077;&#1090;&#1072;-&#1085;&#1072;-&#1084;&#1086;&#1081;-&#1074;&#1086;&#1087;&#1088;&#1086;&#1089;.-&#1063;&#1090;&#1086;-&#1076;&#1077;&#1083;&#1072;&#1090;&#1100;?">&#182;</a></h2>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Задать его преподавателю. Если вопрос возникнет не только у вас, мы добавим ответ на эту страницу.</p>
+<h3 id="&#1053;&#1077;-&#1087;&#1080;&#1096;&#1080;&#1090;&#1077;-&#1074;-&#1086;&#1076;&#1085;&#1091;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1091;">&#1053;&#1077; &#1087;&#1080;&#1096;&#1080;&#1090;&#1077; &#1074; &#1086;&#1076;&#1085;&#1091; &#1089;&#1090;&#1088;&#1086;&#1082;&#1091;<a class="anchor-link" href="#&#1053;&#1077;-&#1087;&#1080;&#1096;&#1080;&#1090;&#1077;-&#1074;-&#1086;&#1076;&#1085;&#1091;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1091;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Не располагайте несколько инструкций в одной строке. Разнесите их по разным строкам.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">func</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">func</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Не располагайте блок из нескольких инструкций на той же строке сразу после двоеточия (после <code>if</code>, <code>while</code> и т.д.)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1050;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1080;">&#1050;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1080;<a class="anchor-link" href="#&#1050;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1080;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Комментарии, противоречащие коду, хуже, чем их отсутствие.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Располагайте однострочные комментарии после кода в той же строке и отделяйте их от кода не менее, чем двумя пробелами. Комментарии должны начинаться с <code>#</code> и одного пробела.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># правильно оформленный комментарий</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1">#слишком близко и без пробела</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1048;&#1084;&#1077;&#1085;&#1072;">&#1048;&#1084;&#1077;&#1085;&#1072;<a class="anchor-link" href="#&#1048;&#1084;&#1077;&#1085;&#1072;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Не используйте символы <code>l</code>, <code>O</code>, <code>I</code> как имена переменных. В некоторых шрифтах они очень похожи на цифры.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;-&#1080;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077; &#1080; &#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;<a class="anchor-link" href="#&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;-&#1080;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Имена <strong>переменных</strong> и <strong>функций</strong> должны содержать только маленькие буквы. Слова разделяются символами подчёркивания.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">name</span><span class="p">,</span> <span class="n">name_from_several_words</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">Name</span><span class="p">,</span> <span class="n">anotheRANDOMname</span><span class="p">,</span> <span class="n">NAME</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1050;&#1086;&#1085;&#1089;&#1090;&#1072;&#1085;&#1090;&#1099;">&#1050;&#1086;&#1085;&#1089;&#1090;&#1072;&#1085;&#1090;&#1099;<a class="anchor-link" href="#&#1050;&#1086;&#1085;&#1089;&#1090;&#1072;&#1085;&#1090;&#1099;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Имена <strong>констант</strong> должны содержать только заглавные буквы. Слова разделяются символами подчёркивания.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">NAME</span><span class="p">,</span> <span class="n">NAME_FROM_SEVERAL_WORDS</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">NAMEFROMSEVERALWORDS</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">Name</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1103;">&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1103;<a class="anchor-link" href="#&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1103;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072;-&#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;-&#1085;&#1072;-&#1087;&#1091;&#1089;&#1090;&#1086;&#1090;&#1091;">&#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080; &#1085;&#1072; &#1087;&#1091;&#1089;&#1090;&#1086;&#1090;&#1091;<a class="anchor-link" href="#&#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072;-&#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;-&#1085;&#1072;-&#1087;&#1091;&#1089;&#1090;&#1086;&#1090;&#1091;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Для последовательностей (строк, списков, кортежей) используйте факт, что пустая последовательность эквивалентна <code>False</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">if</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">if</span> <span class="n">lst</span> <span class="o">!=</span> <span class="p">[]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-True-&#1080;-False?!">&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077; &#1089; True &#1080; False?!<a class="anchor-link" href="#&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-True-&#1080;-False?!">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Не проверяйте переменные логического типа на <code>True</code> и <code>False</code> используя <code>==</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="n">b</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-None">&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077; &#1089; None<a class="anchor-link" href="#&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-None">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Сравнение с <code>None</code> должно осуществляться с помощью операторов <code>is</code> и <code>is not</code>, а не операторами сравнения.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-&#1095;&#1072;&#1089;&#1090;&#1100;&#1102;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077; &#1089; &#1095;&#1072;&#1089;&#1090;&#1100;&#1102; &#1089;&#1090;&#1088;&#1086;&#1082;&#1080;<a class="anchor-link" href="#&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-&#1095;&#1072;&#1089;&#1090;&#1100;&#1102;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Используйте методы <code>.startswith()</code> и <code>.endswith()</code> вместо срезов для проверки начала и конца строк.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello, world!&#39;</span>
+<span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello, world!&#39;</span>
+<span class="k">if</span> <span class="n">s</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Hello&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1060;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#1060;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;<a class="anchor-link" href="#&#1060;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Не ставьте пробелы вокруг знака <code>=</code> при передаче функции именованных аргументов.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Разделяйте определения функций двумя пустыми строками.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">def</span> <span class="nf">f1</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">f2</span><span class="p">():</span>
+    <span class="k">pass</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">def</span> <span class="nf">f1</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">f2</span><span class="p">():</span>
+    <span class="k">pass</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Разделяйте тело функции на логические части одной пустой строкой.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1048;&#1089;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1080;&#1103;-&#1080;&#1079;-&#1087;&#1088;&#1072;&#1074;&#1080;&#1083;">&#1048;&#1089;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1080;&#1103; &#1080;&#1079; &#1087;&#1088;&#1072;&#1074;&#1080;&#1083;<a class="anchor-link" href="#&#1048;&#1089;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1080;&#1103;-&#1080;&#1079;-&#1087;&#1088;&#1072;&#1074;&#1080;&#1083;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Перечисленные выше правила имеет смысл нарушать в тех случаях, когда следование им понижает читаемость кода даже для людей, привыкших к этим правилам. Трижды подумайте, прежде чем делать это.</p>
 
 </div>
 </div>
