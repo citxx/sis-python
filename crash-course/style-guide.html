@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>variables-and-expressions</title>
-
-<script src="files/require.min.js"></script>
+<title>style-guide</title><script src="files/require.min.js"></script>
 <script src="files/jquery.min.js"></script>
 
 <style type="text/css">
@@ -13,8 +11,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1109,7 +1107,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2538,7 +2535,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3029,7 +3025,6 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8760,6 +8755,9 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
+[dir="rtl"] #ipython_notebook {
+  float: right !important;
+}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8962,8 +8960,14 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
+[dir="rtl"] #tabs li {
+  float: right;
+}
 ul#tabs {
   margin-bottom: 4px;
+}
+[dir="rtl"] ul#tabs {
+  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8986,6 +8990,16 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
+}
+[dir="rtl"] .list_toolbar .tree-buttons {
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-right {
+  padding-top: 1px;
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-left {
+  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9122,6 +9136,9 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
+[dir="rtl"] #tree-selector a {
+  float: right;
+}
 #button-select-all {
   min-width: 50px;
 }
@@ -9211,6 +9228,9 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
+[dir="rtl"] #new-menu {
+  text-align: right;
+}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9255,6 +9275,9 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
+}
+[dir="rtl"] #running .col-sm-8 {
+  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9551,6 +9574,7 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
+  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9571,11 +9595,6 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
-}
-@-moz-document url-prefix() {
-  div.inner_cell {
-    overflow-x: hidden;
-  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11246,7 +11265,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 20ex;
+  width: 21ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11558,6 +11577,7 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
+  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11571,6 +11591,9 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
+}
+.terminal-app .terminal .xterm-rows {
+  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11631,8 +11654,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11643,9 +11668,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11698,11 +11725,6 @@ ul.typeahead-list > li > a {
   color: #b71c1c !important;
 }
 
-.rendered_html blockquote {
-  margin: 1em 0em;
-  color: grey;
-}
-
     </style>
 
 
@@ -11716,9 +11738,7 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}
-
-@media print {
+}@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11763,1172 +11783,952 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Содержание<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Переменные" data-toc-modified-id="Переменные-1">Переменные</a></span></li><li><span><a href="#Параллельное-присваивание" data-toc-modified-id="Параллельное-присваивание-2">Параллельное присваивание</a></span></li><li><span><a href="#Ввод-вывод" data-toc-modified-id="Ввод-вывод-3">Ввод-вывод</a></span></li><li><span><a href="#Арифметические-операции" data-toc-modified-id="Арифметические-операции-4">Арифметические операции</a></span></li><li><span><a href="#Арифметические-выражения" data-toc-modified-id="Арифметические-выражения-5">Арифметические выражения</a></span></li><li><span><a href="#Преобразование-типов" data-toc-modified-id="Преобразование-типов-6">Преобразование типов</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Форматирование" data-toc-modified-id="Форматирование-1">Форматирование</a></span><ul class="toc-item"><li><span><a href="#Используйте-4-пробела-для-отступов" data-toc-modified-id="Используйте-4-пробела-для-отступов-1.1">Используйте 4 пробела для отступов</a></span></li><li><span><a href="#Никогда-не-смешивайте-пробелы-и-символы-табуляции" data-toc-modified-id="Никогда-не-смешивайте-пробелы-и-символы-табуляции-1.2">Никогда не смешивайте пробелы и символы табуляции</a></span></li><li><span><a href="#Не-делайте-строки-длиннее-79-символов" data-toc-modified-id="Не-делайте-строки-длиннее-79-символов-1.3">Не делайте строки длиннее 79 символов</a></span></li><li><span><a href="#Пишите-import-каждого-модуля-в-отдельной-строке" data-toc-modified-id="Пишите-import-каждого-модуля-в-отдельной-строке-1.4">Пишите import каждого модуля в отдельной строке</a></span></li><li><span><a href="#Располагайте-import'ы-в-самом-начале-файла" data-toc-modified-id="Располагайте-import'ы-в-самом-начале-файла-1.5">Располагайте import'ы в самом начале файла</a></span></li><li><span><a href="#Не-ставьте-пробелов-сразу-после-скобок" data-toc-modified-id="Не-ставьте-пробелов-сразу-после-скобок-1.6">Не ставьте пробелов сразу после скобок</a></span></li><li><span><a href="#Не-ставьте-пробелов-перед-скобками" data-toc-modified-id="Не-ставьте-пробелов-перед-скобками-1.7">Не ставьте пробелов перед скобками</a></span></li><li><span><a href="#Не-ставьте-пробелов-перед-запятой,-точкой-с-запятой,-двоеточием" data-toc-modified-id="Не-ставьте-пробелов-перед-запятой,-точкой-с-запятой,-двоеточием-1.8">Не ставьте пробелов перед запятой, точкой с запятой, двоеточием</a></span></li><li><span><a href="#Окружайте-бинарные-операторы-ровно-одним-пробелом-с-каждой-стороны" data-toc-modified-id="Окружайте-бинарные-операторы-ровно-одним-пробелом-с-каждой-стороны-1.9">Окружайте бинарные операторы ровно одним пробелом с каждой стороны</a></span></li><li><span><a href="#Не-пишите-в-одну-строку" data-toc-modified-id="Не-пишите-в-одну-строку-1.10">Не пишите в одну строку</a></span></li></ul></li><li><span><a href="#Комментарии" data-toc-modified-id="Комментарии-2">Комментарии</a></span></li><li><span><a href="#Имена" data-toc-modified-id="Имена-3">Имена</a></span><ul class="toc-item"><li><span><a href="#Переменные-и-функции" data-toc-modified-id="Переменные-и-функции-3.1">Переменные и функции</a></span></li><li><span><a href="#Константы" data-toc-modified-id="Константы-3.2">Константы</a></span></li></ul></li><li><span><a href="#Сравнения" data-toc-modified-id="Сравнения-4">Сравнения</a></span><ul class="toc-item"><li><span><a href="#Проверка-последовательности-на-пустоту" data-toc-modified-id="Проверка-последовательности-на-пустоту-4.1">Проверка последовательности на пустоту</a></span></li><li><span><a href="#Сравнение-с-True-и-False?!" data-toc-modified-id="Сравнение-с-True-и-False?!-4.2">Сравнение с True и False?!</a></span></li><li><span><a href="#Сравнение-с-None" data-toc-modified-id="Сравнение-с-None-4.3">Сравнение с None</a></span></li><li><span><a href="#Сравнение-с-частью-строки" data-toc-modified-id="Сравнение-с-частью-строки-4.4">Сравнение с частью строки</a></span></li></ul></li><li><span><a href="#Функции" data-toc-modified-id="Функции-5">Функции</a></span><ul class="toc-item"><li><span><a href="#Исключения-из-правил" data-toc-modified-id="Исключения-из-правил-5.1">Исключения из правил</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;,-&#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;-&#1080;-&#1087;&#1088;&#1086;&#1089;&#1090;&#1086;&#1081;-&#1074;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;">&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;, &#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103; &#1080; &#1087;&#1088;&#1086;&#1089;&#1090;&#1086;&#1081; &#1074;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;<a class="anchor-link" href="#&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;,-&#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;-&#1080;-&#1087;&#1088;&#1086;&#1089;&#1090;&#1086;&#1081;-&#1074;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;">&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;<a class="anchor-link" href="#&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;">&#182;</a></h2>
+<h1 id="&#1057;&#1090;&#1080;&#1083;&#1100;">&#1057;&#1090;&#1080;&#1083;&#1100;<a class="anchor-link" href="#&#1057;&#1090;&#1080;&#1083;&#1100;">&#182;</a></h1>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Как и в любом другом языке программирования, в Python есть переменные. Присвоить переменной значение можно так:</p>
-
+<h2 id="&#1060;&#1086;&#1088;&#1084;&#1072;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;">&#1060;&#1086;&#1088;&#1084;&#1072;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;<a class="anchor-link" href="#&#1060;&#1086;&#1088;&#1084;&#1072;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1091;&#1081;&#1090;&#1077;-4-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1072;-&#1076;&#1083;&#1103;-&#1086;&#1090;&#1089;&#1090;&#1091;&#1087;&#1086;&#1074;">&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1091;&#1081;&#1090;&#1077; 4 &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1072; &#1076;&#1083;&#1103; &#1086;&#1090;&#1089;&#1090;&#1091;&#1087;&#1086;&#1074;<a class="anchor-link" href="#&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1091;&#1081;&#1090;&#1077;-4-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1072;-&#1076;&#1083;&#1103;-&#1086;&#1090;&#1089;&#1090;&#1091;&#1087;&#1086;&#1074;">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;Hello, LKSH&quot;</span>
-<span class="n">c</span> <span class="o">=</span> <span class="mf">5.0</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">if</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-Hello, LKSH
-5.0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Вы могли заметить, что мы нигде не объявили тип переменных <code>a</code>, <code>b</code> и <code>c</code>. В Python этого делать не надо. Язык сам выберет тип по значению, которое вы положили в переменную. Для переменной <code>a</code> это тип <code>int</code> (целое число). Для <code>b</code>&nbsp;— <code>str</code> (строка). Для <code>c</code>&nbsp;— <code>float</code> (вещественное число).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>В ближайшем будущем вы скорее всего познакомитесь с такими типами:</p>
-<table>
-<thead><tr>
-<th>Тип</th>
-<th>Python</th>
-<th>Аналог в C++</th>
-<th>Аналог в Pascal</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Целое число</td>
-<td><code>int</code></td>
-<td><code>int</code></td>
-<td><code>Integer</code></td>
-</tr>
-<tr>
-<td>Вещественное число</td>
-<td><code>float</code></td>
-<td><code>double</code></td>
-<td><code>Double</code></td>
-</tr>
-<tr>
-<td>Строка</td>
-<td><code>str</code></td>
-<td><code>std::string</code></td>
-<td><code>String</code></td>
-</tr>
-<tr>
-<td>Логический</td>
-<td><code>bool</code></td>
-<td><code>bool</code></td>
-<td><code>Boolean</code></td>
-</tr>
-<tr>
-<td>Массив</td>
-<td><code>list</code></td>
-<td><code>std::vector&lt;&gt;</code></td>
-<td><code>Array</code></td>
-</tr>
-<tr>
-<td>Множество</td>
-<td><code>set</code></td>
-<td><code>std::set&lt;&gt;</code></td>
-<td>нет</td>
-</tr>
-<tr>
-<td>Словарь</td>
-<td><code>dict</code></td>
-<td><code>std::map&lt;&gt;</code></td>
-<td>нет</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Тип переменной можно узнать с помощью функции <code>type</code>:</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">5.0</span>
-<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;LKSH students are awesome =^_^=&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">if</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+   <span class="k">if</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;float&#39;&gt;
-&lt;class &#39;str&#39;&gt;
-</pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1055;&#1072;&#1088;&#1072;&#1083;&#1083;&#1077;&#1083;&#1100;&#1085;&#1086;&#1077;-&#1087;&#1088;&#1080;&#1089;&#1074;&#1072;&#1080;&#1074;&#1072;&#1085;&#1080;&#1077;">&#1055;&#1072;&#1088;&#1072;&#1083;&#1083;&#1077;&#1083;&#1100;&#1085;&#1086;&#1077; &#1087;&#1088;&#1080;&#1089;&#1074;&#1072;&#1080;&#1074;&#1072;&#1085;&#1080;&#1077;<a class="anchor-link" href="#&#1055;&#1072;&#1088;&#1072;&#1083;&#1083;&#1077;&#1083;&#1100;&#1085;&#1086;&#1077;-&#1087;&#1088;&#1080;&#1089;&#1074;&#1072;&#1080;&#1074;&#1072;&#1085;&#1080;&#1077;">&#182;</a></h2>
+<h3 id="&#1053;&#1080;&#1082;&#1086;&#1075;&#1076;&#1072;-&#1085;&#1077;-&#1089;&#1084;&#1077;&#1096;&#1080;&#1074;&#1072;&#1081;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1099;-&#1080;-&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1099;-&#1090;&#1072;&#1073;&#1091;&#1083;&#1103;&#1094;&#1080;&#1080;">&#1053;&#1080;&#1082;&#1086;&#1075;&#1076;&#1072; &#1085;&#1077; &#1089;&#1084;&#1077;&#1096;&#1080;&#1074;&#1072;&#1081;&#1090;&#1077; &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1099; &#1080; &#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1099; &#1090;&#1072;&#1073;&#1091;&#1083;&#1103;&#1094;&#1080;&#1080;<a class="anchor-link" href="#&#1053;&#1080;&#1082;&#1086;&#1075;&#1076;&#1072;-&#1085;&#1077;-&#1089;&#1084;&#1077;&#1096;&#1080;&#1074;&#1072;&#1081;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1099;-&#1080;-&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1099;-&#1090;&#1072;&#1073;&#1091;&#1083;&#1103;&#1094;&#1080;&#1080;">&#182;</a></h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>В Python можно присвоит значения сразу нескольким переменным:</p>
+<h3 id="&#1053;&#1077;-&#1076;&#1077;&#1083;&#1072;&#1081;&#1090;&#1077;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;-&#1076;&#1083;&#1080;&#1085;&#1085;&#1077;&#1077;-79-&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1086;&#1074;">&#1053;&#1077; &#1076;&#1077;&#1083;&#1072;&#1081;&#1090;&#1077; &#1089;&#1090;&#1088;&#1086;&#1082;&#1080; &#1076;&#1083;&#1080;&#1085;&#1085;&#1077;&#1077; 79 &#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1086;&#1074;<a class="anchor-link" href="#&#1053;&#1077;-&#1076;&#1077;&#1083;&#1072;&#1081;&#1090;&#1077;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;-&#1076;&#1083;&#1080;&#1085;&#1085;&#1077;&#1077;-79-&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1086;&#1074;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Разделяйте строки на несколько с помощью заключения выражения в скобки. Это способ лучше, чем использование обратного слэша. Делайте соответствующий отступ при переносе. При разбиении строки около бинарного оператора делайте разрыв <strong>после</strong> него.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">var</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span>
+       <span class="n">b</span> <span class="o">/</span> <span class="mi">15</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3
-5
-</pre>
 </div>
-</div>
-
-</div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">var</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">10</span> \
+    <span class="o">+</span> <span class="n">b</span> <span class="o">/</span> <span class="mi">15</span>
+</pre></div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>При этом Python сначала вычисляет все значения <em>справа</em>, а потом уже присваивает вычисленные значения переменным слева:</p>
+<h3 id="&#1055;&#1080;&#1096;&#1080;&#1090;&#1077;-import-&#1082;&#1072;&#1078;&#1076;&#1086;&#1075;&#1086;-&#1084;&#1086;&#1076;&#1091;&#1083;&#1103;-&#1074;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1100;&#1085;&#1086;&#1081;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1077;">&#1055;&#1080;&#1096;&#1080;&#1090;&#1077; import &#1082;&#1072;&#1078;&#1076;&#1086;&#1075;&#1086; &#1084;&#1086;&#1076;&#1091;&#1083;&#1103; &#1074; &#1086;&#1090;&#1076;&#1077;&#1083;&#1100;&#1085;&#1086;&#1081; &#1089;&#1090;&#1088;&#1086;&#1082;&#1077;<a class="anchor-link" href="#&#1055;&#1080;&#1096;&#1080;&#1090;&#1077;-import-&#1082;&#1072;&#1078;&#1076;&#1086;&#1075;&#1086;-&#1084;&#1086;&#1076;&#1091;&#1083;&#1103;-&#1074;-&#1086;&#1090;&#1076;&#1077;&#1083;&#1100;&#1085;&#1086;&#1081;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1077;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="kn">import</span> <span class="nn">math</span><span class="o">,</span> <span class="nn">sys</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1056;&#1072;&#1089;&#1087;&#1086;&#1083;&#1072;&#1075;&#1072;&#1081;&#1090;&#1077;-import'&#1099;-&#1074;-&#1089;&#1072;&#1084;&#1086;&#1084;-&#1085;&#1072;&#1095;&#1072;&#1083;&#1077;-&#1092;&#1072;&#1081;&#1083;&#1072;">&#1056;&#1072;&#1089;&#1087;&#1086;&#1083;&#1072;&#1075;&#1072;&#1081;&#1090;&#1077; import'&#1099; &#1074; &#1089;&#1072;&#1084;&#1086;&#1084; &#1085;&#1072;&#1095;&#1072;&#1083;&#1077; &#1092;&#1072;&#1081;&#1083;&#1072;<a class="anchor-link" href="#&#1056;&#1072;&#1089;&#1087;&#1086;&#1083;&#1072;&#1075;&#1072;&#1081;&#1090;&#1077;-import'&#1099;-&#1074;-&#1089;&#1072;&#1084;&#1086;&#1084;-&#1085;&#1072;&#1095;&#1072;&#1083;&#1077;-&#1092;&#1072;&#1081;&#1083;&#1072;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+    <span class="k">pass</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1089;&#1088;&#1072;&#1079;&#1091;-&#1087;&#1086;&#1089;&#1083;&#1077;-&#1089;&#1082;&#1086;&#1073;&#1086;&#1082;">&#1053;&#1077; &#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077; &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074; &#1089;&#1088;&#1072;&#1079;&#1091; &#1087;&#1086;&#1089;&#1083;&#1077; &#1089;&#1082;&#1086;&#1073;&#1086;&#1082;<a class="anchor-link" href="#&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1089;&#1088;&#1072;&#1079;&#1091;-&#1087;&#1086;&#1089;&#1083;&#1077;-&#1089;&#1082;&#1086;&#1073;&#1086;&#1082;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">spam</span><span class="p">(</span><span class="n">ham</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">{</span><span class="n">eggs</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">spam</span><span class="p">(</span> <span class="n">ham</span><span class="p">[</span> <span class="mi">1</span> <span class="p">],</span> <span class="p">{</span> <span class="n">eggs</span><span class="p">:</span> <span class="mi">2</span> <span class="p">}</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1087;&#1077;&#1088;&#1077;&#1076;-&#1089;&#1082;&#1086;&#1073;&#1082;&#1072;&#1084;&#1080;">&#1053;&#1077; &#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077; &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074; &#1087;&#1077;&#1088;&#1077;&#1076; &#1089;&#1082;&#1086;&#1073;&#1082;&#1072;&#1084;&#1080;<a class="anchor-link" href="#&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1087;&#1077;&#1088;&#1077;&#1076;-&#1089;&#1082;&#1086;&#1073;&#1082;&#1072;&#1084;&#1080;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Перед открывающей круглой скобкой при вызове функции</li>
+<li>Перед открывающей квадратной скобкой, обозначающей индексирование или срез</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">spam</span><span class="p">(</span><span class="n">kind</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-8
-</pre>
 </div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">spam</span> <span class="p">(</span><span class="n">kind</span> <span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">],</span> <span class="n">lst</span> <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
 
 </div>
 </div>
+</div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Это позволяет, например, поменять значения двух переменных в одну строку:</p>
+<h3 id="&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1087;&#1077;&#1088;&#1077;&#1076;-&#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;,-&#1090;&#1086;&#1095;&#1082;&#1086;&#1081;-&#1089;-&#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;,-&#1076;&#1074;&#1086;&#1077;&#1090;&#1086;&#1095;&#1080;&#1077;&#1084;">&#1053;&#1077; &#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077; &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074; &#1087;&#1077;&#1088;&#1077;&#1076; &#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;, &#1090;&#1086;&#1095;&#1082;&#1086;&#1081; &#1089; &#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;, &#1076;&#1074;&#1086;&#1077;&#1090;&#1086;&#1095;&#1080;&#1077;&#1084;<a class="anchor-link" href="#&#1053;&#1077;-&#1089;&#1090;&#1072;&#1074;&#1100;&#1090;&#1077;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1074;-&#1087;&#1077;&#1088;&#1077;&#1076;-&#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;,-&#1090;&#1086;&#1095;&#1082;&#1086;&#1081;-&#1089;-&#1079;&#1072;&#1087;&#1103;&#1090;&#1086;&#1081;,-&#1076;&#1074;&#1086;&#1077;&#1090;&#1086;&#1095;&#1080;&#1077;&#1084;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="p">;</span> <span class="n">x</span> <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="p">,</span> <span class="n">x</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1054;&#1082;&#1088;&#1091;&#1078;&#1072;&#1081;&#1090;&#1077;-&#1073;&#1080;&#1085;&#1072;&#1088;&#1085;&#1099;&#1077;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1099;-&#1088;&#1086;&#1074;&#1085;&#1086;-&#1086;&#1076;&#1085;&#1080;&#1084;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1084;-&#1089;-&#1082;&#1072;&#1078;&#1076;&#1086;&#1081;-&#1089;&#1090;&#1086;&#1088;&#1086;&#1085;&#1099;">&#1054;&#1082;&#1088;&#1091;&#1078;&#1072;&#1081;&#1090;&#1077; &#1073;&#1080;&#1085;&#1072;&#1088;&#1085;&#1099;&#1077; &#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1099; &#1088;&#1086;&#1074;&#1085;&#1086; &#1086;&#1076;&#1085;&#1080;&#1084; &#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1084; &#1089; &#1082;&#1072;&#1078;&#1076;&#1086;&#1081; &#1089;&#1090;&#1086;&#1088;&#1086;&#1085;&#1099;<a class="anchor-link" href="#&#1054;&#1082;&#1088;&#1091;&#1078;&#1072;&#1081;&#1090;&#1077;-&#1073;&#1080;&#1085;&#1072;&#1088;&#1085;&#1099;&#1077;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088;&#1099;-&#1088;&#1086;&#1074;&#1085;&#1086;-&#1086;&#1076;&#1085;&#1080;&#1084;-&#1087;&#1088;&#1086;&#1073;&#1077;&#1083;&#1086;&#1084;-&#1089;-&#1082;&#1072;&#1078;&#1076;&#1086;&#1081;-&#1089;&#1090;&#1086;&#1088;&#1086;&#1085;&#1099;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Верно для операторов:</p>
+<ul>
+<li>Присваивания (<code>=</code>, <code>+=</code>, <code>-=</code> и т.д.)</li>
+<li>Сравнения (<code>==</code>, <code>&lt;</code>, <code>&gt;</code>, <code>!=</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>in</code>, <code>not in</code>, <code>is</code>, <code>is not</code>)</li>
+<li>Логических (<code>and</code>, <code>or</code>, <code>not</code>)</li>
+<li>Арифметических (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code> и т.д.)</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;apple&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;banana&quot;</span>
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+<span class="n">a</span> <span class="ow">and</span> <span class="n">b</span>
+<span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">8</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>banana
-apple
-</pre>
 </div>
-</div>
-
-</div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">a</span><span class="o">==</span><span class="n">b</span>
+<span class="n">a</span>  <span class="ow">and</span>   <span class="n">b</span>
+<span class="mi">3</span><span class="o">+</span><span class="mi">5</span>  <span class="o">*</span>  <span class="mi">8</span>
+</pre></div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1042;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;">&#1042;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;<a class="anchor-link" href="#&#1042;&#1074;&#1086;&#1076;-&#1074;&#1099;&#1074;&#1086;&#1076;">&#182;</a></h2>
+<h3 id="&#1053;&#1077;-&#1087;&#1080;&#1096;&#1080;&#1090;&#1077;-&#1074;-&#1086;&#1076;&#1085;&#1091;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1091;">&#1053;&#1077; &#1087;&#1080;&#1096;&#1080;&#1090;&#1077; &#1074; &#1086;&#1076;&#1085;&#1091; &#1089;&#1090;&#1088;&#1086;&#1082;&#1091;<a class="anchor-link" href="#&#1053;&#1077;-&#1087;&#1080;&#1096;&#1080;&#1090;&#1077;-&#1074;-&#1086;&#1076;&#1085;&#1091;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1091;">&#182;</a></h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Как вы уже видели, для вывода на экран в Python есть функция <code>print</code>. Ей можно передавать несколько значений через запятую — они будут выведены в одной строке через пробел:</p>
+<p>Не располагайте несколько инструкций в одной строке. Разнесите их по разным строкам.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;+&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">func</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2 + 3 = 5
-</pre>
 </div>
-</div>
-
-</div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">func</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Для ввода с клавиатуры есть функция <code>input</code>. Она считывает одну строку целиком:</p>
+<p>Не располагайте блок из нескольких инструкций на той же строке сразу после двоеточия (после <code>if</code>, <code>while</code> и т.д.)</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-3
-23
-</pre>
 </div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
 
+</div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ага, что-то пошло не так! Мы получили <strong>23</strong> вместо <strong>5</strong>. Так произошло, потому что <code>input()</code> возращает строку (<code>str</code>), а не число (<code>int</code>). Чтобы это исправить нам надо явно преобразовать результат функции <code>input()</code> к типу <code>int</code>.</p>
+<h2 id="&#1050;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1080;">&#1050;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1080;<a class="anchor-link" href="#&#1050;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1080;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Комментарии, противоречащие коду, хуже, чем их отсутствие.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Располагайте однострочные комментарии после кода в той же строке и отделяйте их от кода не менее, чем двумя пробелами. Комментарии должны начинаться с <code>#</code> и одного пробела.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># правильно оформленный комментарий</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-3
-5
-</pre>
 </div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1">#слишком близко и без пробела</span>
+</pre></div>
 
+</div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Так-то лучше :)</p>
-<p><strong>Частая ошибка</strong> — забыть внутренние скобки после функции <code>input</code>. Давайте посмотрим, что в этом случае произойдёт:</p>
+<h2 id="&#1048;&#1084;&#1077;&#1085;&#1072;">&#1048;&#1084;&#1077;&#1085;&#1072;<a class="anchor-link" href="#&#1048;&#1084;&#1077;&#1085;&#1072;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Не используйте символы <code>l</code>, <code>O</code>, <code>I</code> как имена переменных. В некоторых шрифтах они очень похожи на цифры.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;-&#1080;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077; &#1080; &#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;<a class="anchor-link" href="#&#1055;&#1077;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;-&#1080;-&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Имена <strong>переменных</strong> и <strong>функций</strong> должны содержать только маленькие буквы. Слова разделяются символами подчёркивания. Не используйте транслит для переменных, называйте их по-английски.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">name</span><span class="p">,</span> <span class="n">name_from_several_words</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">Name</span><span class="p">,</span> <span class="n">anotheRANDOMname</span><span class="p">,</span> <span class="n">NAME</span><span class="p">,</span> <span class="n">imya</span>
+</pre></div>
 
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-9-4374d682a371&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>a <span class="ansi-blue-fg">=</span> int<span class="ansi-blue-fg">(</span>input<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> b <span class="ansi-blue-fg">=</span> int<span class="ansi-blue-fg">(</span>input<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>a <span class="ansi-blue-fg">+</span> b<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">TypeError</span>: int() argument must be a string, a bytes-like object or a number, not &#39;method&#39;</pre>
+</div>
 </div>
 </div>
 
 </div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Эту ошибку можно перевести с английского так:</p>
-
-<pre><code>ОшибкаТипа: аргумент функции int() должен быть строкой, последовательностью байтов или числом, а не функцией</code></pre>
-<p>Теперь вы знаете что делать, если получите такую ошибку ;)</p>
-
+<h3 id="&#1050;&#1086;&#1085;&#1089;&#1090;&#1072;&#1085;&#1090;&#1099;">&#1050;&#1086;&#1085;&#1089;&#1090;&#1072;&#1085;&#1090;&#1099;<a class="anchor-link" href="#&#1050;&#1086;&#1085;&#1089;&#1090;&#1072;&#1085;&#1090;&#1099;">&#182;</a></h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1094;&#1080;&#1080;">&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1086;&#1087;&#1077;&#1088;&#1072;&#1094;&#1080;&#1080;<a class="anchor-link" href="#&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;-&#1086;&#1087;&#1077;&#1088;&#1072;&#1094;&#1080;&#1080;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Давайте научимся складывать, умножать, вычитать и производить другие операции с целыми (тип <code>int</code>) или вещественными (тип <code>float</code>) числами. Стоит понимать, что целое число и вещественное число — это совсем разные вещи для компьютера.</p>
-<p>Список основных <em>бинарных</em> (требующих 2 переменных) арифметических действий, которые вам понадобятся:</p>
-<table>
-<thead><tr>
-<th>Действие</th>
-<th>Обозначение в Python</th>
-<th>Аналог в C++</th>
-<th>Аналог в Pascal</th>
-<th>Приоритет</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Сложение</td>
-<td><code>a + b</code></td>
-<td><code>a + b</code></td>
-<td><code>a + b</code></td>
-<td>3</td>
-</tr>
-<tr>
-<td>Вычитание</td>
-<td><code>a - b</code></td>
-<td><code>a - b</code></td>
-<td><code>a - b</code></td>
-<td>3</td>
-</tr>
-<tr>
-<td>Умножение</td>
-<td><code>a * b</code></td>
-<td><code>a * b</code></td>
-<td><code>a * b</code></td>
-<td>2</td>
-</tr>
-<tr>
-<td>Вещественное деление</td>
-<td><code>a / b</code></td>
-<td><code>a / b</code></td>
-<td><code>a / b</code></td>
-<td>2</td>
-</tr>
-<tr>
-<td>Целочисленное деление (с округлением вниз)</td>
-<td><code>a // b</code></td>
-<td><code>a / b</code></td>
-<td><code>a div b</code></td>
-<td>2</td>
-</tr>
-<tr>
-<td>Остаток от деления</td>
-<td><code>a % b</code></td>
-<td><code>a % b</code></td>
-<td><code>a mod b</code></td>
-<td>2</td>
-</tr>
-<tr>
-<td>Возведение в степень</td>
-<td><code>a ** b</code></td>
-<td><code>pow(a, b)</code></td>
-<td><code>power(a, b)</code></td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Сложение</strong>, <strong>вычитание</strong> и <strong>умножение</strong> работают точно также, как и в других языках:</p>
+<p>Имена <strong>констант</strong> должны содержать только заглавные буквы. Слова разделяются символами подчёркивания.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">11</span> <span class="o">+</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span> <span class="o">-</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span> <span class="o">*</span> <span class="mi">7</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">9</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">12</span> <span class="o">-</span> <span class="mi">5</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">NAME</span><span class="p">,</span> <span class="n">NAME_FROM_SEVERAL_WORDS</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>18 4 77 77
-</pre>
 </div>
-</div>
-
-</div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">NAMEFROMSEVERALWORDS</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">Name</span>
+</pre></div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Вещественное деление</strong> всегда даёт вещественное число (<code>float</code>) в результате, независимо от аргументов:</p>
+<h2 id="&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1103;">&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1103;<a class="anchor-link" href="#&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1103;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072;-&#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;-&#1085;&#1072;-&#1087;&#1091;&#1089;&#1090;&#1086;&#1090;&#1091;">&#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072; &#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080; &#1085;&#1072; &#1087;&#1091;&#1089;&#1090;&#1086;&#1090;&#1091;<a class="anchor-link" href="#&#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072;-&#1087;&#1086;&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;-&#1085;&#1072;-&#1087;&#1091;&#1089;&#1090;&#1086;&#1090;&#1091;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Для последовательностей (строк, списков, кортежей) используйте факт, что пустая последовательность эквивалентна <code>False</code>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">12</span> <span class="o">/</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span> <span class="o">/</span> <span class="o">-</span><span class="mi">7</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">if</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.5 3.0 -1.7142857142857142
-</pre>
 </div>
-</div>
-
-</div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">if</span> <span class="n">lst</span> <span class="o">!=</span> <span class="p">[]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Результат <strong>целочисленного деления</strong> — это результат вещественного деления, округлённый до <em>ближайшего меньшего целого</em>:</p>
+<h3 id="&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-True-&#1080;-False?!">&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077; &#1089; True &#1080; False?!<a class="anchor-link" href="#&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-True-&#1080;-False?!">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Не проверяйте переменные логического типа на <code>True</code> и <code>False</code> используя <code>==</code>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">12</span> <span class="o">//</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span> <span class="o">//</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span> <span class="o">//</span> <span class="o">-</span><span class="mi">7</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="n">b</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1 3 -2
-</pre>
 </div>
-</div>
-
-</div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">b</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No&quot;</span><span class="p">)</span>
+</pre></div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Остаток от деления</strong> — это то что осталось от числа после целочисленного деления.</p>
-<p>Если <code>c = a // b</code>, то <code>a</code> можно представить в виде <code>a = c * b + r</code>. В этом случае <code>r</code> — это остаток от деления.</p>
-<p>Пример: <code>a = 20</code>, <code>b = 8</code>, <code>c = a // b = 2</code>. Тогда <code>a = c * b + r</code> превратится в <code>20 = 2 * 8 + 4</code>. Остаток от деления — <code>4</code>.</p>
+<h3 id="&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-None">&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077; &#1089; None<a class="anchor-link" href="#&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-None">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Сравнение с <code>None</code> должно осуществляться с помощью операторов <code>is</code> и <code>is not</code>, а не операторами сравнения.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">12</span> <span class="o">%</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span> <span class="o">%</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span> <span class="o">%</span> <span class="o">-</span><span class="mi">7</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>4 0 -2
-</pre>
 </div>
-</div>
-
-</div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Возведение <code>a</code> в степень <code>b</code></strong> — это перемножение <code>a</code> на само себя <code>b</code> раз. В математике обозначается как $a^b$.</p>
+<h3 id="&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-&#1095;&#1072;&#1089;&#1090;&#1100;&#1102;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077; &#1089; &#1095;&#1072;&#1089;&#1090;&#1100;&#1102; &#1089;&#1090;&#1088;&#1086;&#1082;&#1080;<a class="anchor-link" href="#&#1057;&#1088;&#1072;&#1074;&#1085;&#1077;&#1085;&#1080;&#1077;-&#1089;-&#1095;&#1072;&#1089;&#1090;&#1100;&#1102;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Используйте методы <code>.startswith()</code> и <code>.endswith()</code> вместо срезов для проверки начала и конца строк.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span> <span class="o">**</span> <span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello, world!&#39;</span>
+<span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>25 16 1
-</pre>
 </div>
-</div>
-
-</div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello, world!&#39;</span>
+<span class="k">if</span> <span class="n">s</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Hello&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi&#39;</span><span class="p">)</span>
+</pre></div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Возведение в степень работает для вещественных <code>a</code> и отрицательных <code>b</code>. Число в отрицательной степени — это единица делённое на то же число в положительной степени: $a^{-b} = \frac{1}{a^b}$</p>
+<h2 id="&#1060;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#1060;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;<a class="anchor-link" href="#&#1060;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Не ставьте пробелы вокруг знака <code>=</code> при передаче функции именованных аргументов.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mf">2.5</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span> <span class="o">**</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>6.25 0.125
-</pre>
 </div>
-</div>
-
-</div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Давайте посмотрим что получится, если возвести в большую степень целое число:</p>
+<p>Разделяйте определения функций двумя пустыми строками.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">**</span> <span class="mi">100</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Правильно</span>
+<span class="k">def</span> <span class="nf">f1</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">f2</span><span class="p">():</span>
+    <span class="k">pass</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>7888609052210118054117285652827862296732064351090230047702789306640625
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>В отличии от C++ или Pascal, Python правильно считает результат, даже если в результате получается очень большое число.</p>
-<p>А что если возвести вещественное число в большую степень?</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mf">5.0</span> <span class="o">**</span> <span class="mi">100</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Неверно</span>
+<span class="k">def</span> <span class="nf">f1</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">f2</span><span class="p">():</span>
+    <span class="k">pass</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>7.888609052210118e+69
-</pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Запись вида <code>&lt;число&gt;e&lt;степень&gt;</code> — это другой способ записать $\text{<число>} \cdot 10^\text{<степень>}$. То есть:</p>
-$$\text{7.888609052210118e+69} = 7.888609052210118 \cdot 10^{69}$$<p>а это то же самое, что и 7888609052210118000000000000000000000000000000000000000000000000000000.</p>
-<p>Этот результат не настолько точен, как предыдущий. Так происходит потому, что для хранения каждого вещественного числа Python использует фиксированное количество памяти, а значит может хранить число только с ограниченной точностью.</p>
+<p>Разделяйте тело функции на логические части одной пустой строкой.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Возведение в степень также работает и для вещественной степени. Например $\sqrt{a} = a^\frac{1}{2} = a^{0.5}$</p>
-
+<h3 id="&#1048;&#1089;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1080;&#1103;-&#1080;&#1079;-&#1087;&#1088;&#1072;&#1074;&#1080;&#1083;">&#1048;&#1089;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1080;&#1103; &#1080;&#1079; &#1087;&#1088;&#1072;&#1074;&#1080;&#1083;<a class="anchor-link" href="#&#1048;&#1089;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1080;&#1103;-&#1080;&#1079;-&#1087;&#1088;&#1072;&#1074;&#1080;&#1083;">&#182;</a></h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">9</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.4142135623730951 3.0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>В школе вам, наверное, рассказывали, что квадратный корень нельзя извлекать из отрицательных чисел. С++ и Pascal при попытке сделать это выдадут ошибку. Давайте посмотрим, что сделает Python:</p>
+<p>Перечисленные выше правила имеет смысл нарушать в тех случаях, когда следование им понижает читаемость кода даже для людей, привыкших к этим правилам. Трижды подумайте, прежде чем делать это.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">((</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>(1.2246467991473532e-16+2j)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>В общем, это не совсем правда. Извлекать квадратный корень из отрицательных чисел, всё-таки, можно, но в результате получится не <strong>вещественное</strong>, а так называемое <strong>комплексное</strong> число. Если вы получили страшную такую штуку в своей программе, скорее всего ваш код взял корень из отрицательного числа, а значит вам надо искать в нём ошибку. В ближайшее время вам нет необходимости что-то знать про комплексные числа.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;-&#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;">&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077; &#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;<a class="anchor-link" href="#&#1040;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;-&#1074;&#1099;&#1088;&#1072;&#1078;&#1077;&#1085;&#1080;&#1103;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Естественно, как и во многих других языках программирования, вы можете составлять большие выражения из переменных, чисел, арифметических операций и скобок. Например:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">11</span>
-<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">9</span> <span class="o">-</span> <span class="n">b</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>6.125
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>В примере выше переменной <code>c</code> присвоено значение выражения</p>
-$$\frac{a^2 + b \cdot 3}{9 - b \text{ mod } (a + 1)}$$<p>При отсутствии скобок арфиметические операции в выражении вычисляются в порядке приоритета (см. таблицу выше). Сначала выполняются операции с приоритетом 1, потом с приоритетом 2 и т.д. При одинаковом приоритете вычисление происходит слева направо. Вы можете использовать скобки, чтобы менять порядок вычисления.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>6
-8
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#1055;&#1088;&#1077;&#1086;&#1073;&#1088;&#1072;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;-&#1090;&#1080;&#1087;&#1086;&#1074;">&#1055;&#1088;&#1077;&#1086;&#1073;&#1088;&#1072;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1090;&#1080;&#1087;&#1086;&#1074;<a class="anchor-link" href="#&#1055;&#1088;&#1077;&#1086;&#1073;&#1088;&#1072;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;-&#1090;&#1080;&#1087;&#1086;&#1074;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Если у вас есть значение одного типа, то вы можете преобразовать его к другому типу, вызвав функцию с таким же именем:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;-15&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>-15 -15 -15.0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Больше примеров:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># a_int, b_float, c_str - это просто имена переменных.</span>
-<span class="c1"># Они так названы, чтобы было проще разобраться, где какое значение лежит.</span>
-<span class="n">a_int</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">b_float</span> <span class="o">=</span> <span class="mf">5.0</span>
-<span class="n">c_str</span> <span class="o">=</span> <span class="s2">&quot;10&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a_int</span><span class="p">,</span> <span class="n">b_float</span><span class="p">,</span> <span class="n">c_str</span><span class="p">)</span>
-
-<span class="c1"># При попытке сложить без преобразования мы получили бы ошибку, потому что Python</span>
-<span class="c1"># не умеет складывать числа со строками.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a_int + int(c_str) =&quot;</span><span class="p">,</span> <span class="n">a_int</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">c_str</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;str(a_int) + str(b_float) =&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">a_int</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b_float</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;float(c_str) =&quot;</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">c_str</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3 5.0 10
-a_int + int(c_str) = 13
-str(a_int) + str(b_float) = 35.0
-float(c_str) = 10.0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     </div>
   </div>
 </body>
+
+ 
+
+
 </html>

@@ -3,8 +3,8 @@
 <head><meta charset="utf-8" />
 <title>slices</title>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="files/require.min.js"></script>
+<script src="files/jquery.min.js"></script>
 
 <style type="text/css">
     /*!
@@ -11739,7 +11739,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="files/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11768,7 +11768,26 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><h1>Содержание<span class="tocSkip"></span></h1></p>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Получение-среза" data-toc-modified-id="Получение-среза-1">Получение среза</a></span><ul class="toc-item"><li><span><a href="#Без-параметров" data-toc-modified-id="Без-параметров-1.1">Без параметров</a></span></li><li><span><a href="#Указываем-конец" data-toc-modified-id="Указываем-конец-1.2">Указываем конец</a></span></li><li><span><a href="#Указываем-начало" data-toc-modified-id="Указываем-начало-1.3">Указываем начало</a></span></li><li><span><a href="#Указываем-шаг" data-toc-modified-id="Указываем-шаг-1.4">Указываем шаг</a></span></li><li><span><a href="#Отрицательный-шаг" data-toc-modified-id="Отрицательный-шаг-1.5">Отрицательный шаг</a></span></li></ul></li><li><span><a href="#Особенности-срезов" data-toc-modified-id="Особенности-срезов-2">Особенности срезов</a></span></li><li><span><a href="#Примеры-использования" data-toc-modified-id="Примеры-использования-3">Примеры использования</a></span></li><li><span><a href="#Срезы-и-строки" data-toc-modified-id="Срезы-и-строки-4">Срезы и строки</a></span></li></ul></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="&#1057;&#1088;&#1077;&#1079;&#1099;">&#1057;&#1088;&#1077;&#1079;&#1099;<a class="anchor-link" href="#&#1057;&#1088;&#1077;&#1079;&#1099;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1055;&#1086;&#1083;&#1091;&#1095;&#1077;&#1085;&#1080;&#1077;-&#1089;&#1088;&#1077;&#1079;&#1072;">&#1055;&#1086;&#1083;&#1091;&#1095;&#1077;&#1085;&#1080;&#1077; &#1089;&#1088;&#1077;&#1079;&#1072;<a class="anchor-link" href="#&#1055;&#1086;&#1083;&#1091;&#1095;&#1077;&#1085;&#1080;&#1077;-&#1089;&#1088;&#1077;&#1079;&#1072;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11779,7 +11798,26 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Бывает такое, что нам нужна только некоторая часть списка, например все элементы с 5 по 10, или все элементы с четными индексами. Подобное можно сделать с помощью <strong>срезов</strong>.</p>
 <p>Срез задаётся как <code>список[start:end:step]</code>, где из списка будут браться элементы с индексами от <code>start</code> (включительно) до <code>end</code> (не включительно) с шагом <code>step</code>. Любое из значений <code>start</code>, <code>end</code>, <code>step</code> можно опустить. В таком случае по умолчанию <code>start</code> равен 0, <code>end</code> равен длине списка, то есть индексу последнего элемента + 1, <code>step</code> равен 1.</p>
-<p>Например, срез <code>a[::]</code> будет содержать просто весь список <code>a</code>:</p>
+<p>Cрезы и <code>range</code> очень похожи набором параметров.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1041;&#1077;&#1079;-&#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1086;&#1074;">&#1041;&#1077;&#1079; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1086;&#1074;<a class="anchor-link" href="#&#1041;&#1077;&#1079;-&#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;&#1086;&#1074;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Срез <code>a[::]</code> будет содержать просто весь список <code>a</code>:</p>
 
 </div>
 </div>
@@ -11817,7 +11855,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Если не указывать шаг, то можно опустить и <code>:</code> перед ним:</p>
+<p>Можно опустить и <code>:</code> перед указанием шага, если его не указывать:</p>
 
 </div>
 </div>
@@ -11855,7 +11893,16 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Изменяем до какого элемента выводить:</p>
+<h3 id="&#1059;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084;-&#1082;&#1086;&#1085;&#1077;&#1094;">&#1059;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084; &#1082;&#1086;&#1085;&#1077;&#1094;<a class="anchor-link" href="#&#1059;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084;-&#1082;&#1086;&#1085;&#1077;&#1094;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Указываем до какого элемента выводить:</p>
 
 </div>
 </div>
@@ -11866,7 +11913,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>  <span class="c1"># то же самое, что и lst[:5:]</span>
 </pre></div>
 
 </div>
@@ -11921,6 +11968,15 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#1059;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084;-&#1085;&#1072;&#1095;&#1072;&#1083;&#1086;">&#1059;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084; &#1085;&#1072;&#1095;&#1072;&#1083;&#1086;<a class="anchor-link" href="#&#1059;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084;-&#1085;&#1072;&#1095;&#1072;&#1083;&#1086;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Или с какого элемента начинать:</p>
 
 </div>
@@ -11929,34 +11985,6 @@ div#notebook {
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[3, 4, 5]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
@@ -11982,13 +12010,40 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[3, 4, 5]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Изменяем шаг:</p>
-
+<h3 id="&#1059;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084;-&#1096;&#1072;&#1075;">&#1059;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084; &#1096;&#1072;&#1075;<a class="anchor-link" href="#&#1059;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1084;-&#1096;&#1072;&#1075;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12053,7 +12108,16 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Можно даже сделать отрицательный шаг, как и в циклах:</p>
+<h3 id="&#1054;&#1090;&#1088;&#1080;&#1094;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081;-&#1096;&#1072;&#1075;">&#1054;&#1090;&#1088;&#1080;&#1094;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081; &#1096;&#1072;&#1075;<a class="anchor-link" href="#&#1054;&#1090;&#1088;&#1080;&#1094;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081;-&#1096;&#1072;&#1075;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Можно даже сделать отрицательный шаг, как в <code>range</code>:</p>
 
 </div>
 </div>
@@ -12086,6 +12150,16 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>С указанием начала срез с отрицательным шагом можно понимать как: "Начиная с элемента с индексом 2 идти в обратную сторону с шагом 1 до того, как список закончится".</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
@@ -12106,6 +12180,248 @@ div#notebook {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[3, 2, 1]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Для отрицательного шага важно правильно указывать порядок начала и конца, и помнить, что левое число всегда включительно, правое - не включительно:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="c1"># Допустим, хотим элементы с индексами 1 и 2 в обратном порядке</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Начиная с элемента с индексом 2 идти в обратную сторону с шагом 1</span>
+<span class="c1"># до того, как встретим элемент с индексом 0 (0 не включительно)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[]
+[3, 2]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1054;&#1089;&#1086;&#1073;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1080;-&#1089;&#1088;&#1077;&#1079;&#1086;&#1074;">&#1054;&#1089;&#1086;&#1073;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1080; &#1089;&#1088;&#1077;&#1079;&#1086;&#1074;<a class="anchor-link" href="#&#1054;&#1089;&#1086;&#1073;&#1077;&#1085;&#1085;&#1086;&#1089;&#1090;&#1080;-&#1089;&#1088;&#1077;&#1079;&#1086;&#1074;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Срезы не изменяют текущий список, а создают копию. С помощью срезов можно решить проблему ссылочной реализации при изменении одного элемента списка:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># а - ссылка на список, каждый элемент списка это ссылки на объекты 1, 2, 3, 4</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>             <span class="c1"># b - ссылка на тот же самый список</span>
+
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>         <span class="c1"># Меняем элемент списка a</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b =&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Значение b тоже поменялось!</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:]</span>          <span class="c1"># Создаём копию списка</span>
+
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>          <span class="c1"># Меняем элемент списка a</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b =&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Значение b не изменилось!</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a = [-1, 2, 3, 4]
+b = [-1, 2, 3, 4]
+
+a = [-1, 2, 3, 4]
+b = [1, 2, 3, 4]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099;-&#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;">&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099; &#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;<a class="anchor-link" href="#&#1055;&#1088;&#1080;&#1084;&#1077;&#1088;&#1099;-&#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>С помощью срезов можно, например, пропустить элемент списка с заданным индексом:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">lst</span><span class="p">[</span><span class="mi">5</span><span class="p">:])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4, 6, 7, 8]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Или поменять местами две части списка:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">swapped</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span> <span class="o">+</span> <span class="n">lst</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># поменять местами, начиная с элемента с индексом 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">swapped</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[6, 7, 8, 1, 2, 3, 4, 5]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#1057;&#1088;&#1077;&#1079;&#1099;-&#1080;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">&#1057;&#1088;&#1077;&#1079;&#1099; &#1080; &#1089;&#1090;&#1088;&#1086;&#1082;&#1080;<a class="anchor-link" href="#&#1057;&#1088;&#1077;&#1079;&#1099;-&#1080;-&#1089;&#1090;&#1088;&#1086;&#1082;&#1080;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Срезы можно использовать не только для списков, но и для строк. Например, чтобы изменить третий символ строки, можно сделать так:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;long string&quot;</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>lo!g string
 </pre>
 </div>
 </div>
